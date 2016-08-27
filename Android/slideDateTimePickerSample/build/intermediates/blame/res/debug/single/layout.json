@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\slide_date_time_picker.xml",
+        "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\slide_date_time_picker.xml"
+    },
+    {
+        "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_time.xml",
+        "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\fragment_time.xml"
+    },
+    {
+        "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sample.xml",
+        "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\src\\main\\res\\layout\\activity_sample.xml"
+    },
+    {
+        "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_date.xml",
+        "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\fragment_date.xml"
+    },
+    {
+        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_date.xml",
+        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\fragment_date.xml"
+    },
+    {
+        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sample.xml",
+        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\src\\main\\res\\layout\\activity_sample.xml"
+    },
+    {
+        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_time.xml",
+        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\fragment_time.xml"
+    },
+    {
+        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\slide_date_time_picker.xml",
+        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\slide_date_time_picker.xml"
+    },
+    {
+        "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\custom_tab.xml",
+        "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\custom_tab.xml"
+    },
+    {
+        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\layout\\custom_tab.xml",
+        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\layout\\custom_tab.xml"
+    }
+]

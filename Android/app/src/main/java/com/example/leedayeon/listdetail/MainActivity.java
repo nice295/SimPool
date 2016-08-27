@@ -1,40 +1,20 @@
 package com.example.leedayeon.listdetail;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
-import android.support.annotation.Dimension;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
@@ -53,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         etTitle = (EditText)findViewById(R.id.editText);
         etDesc = (EditText)findViewById(R.id.editText2);
-        addBtn = (Button)findViewById(R.id.button);
+        addBtn = (Button)findViewById(R.id.btTime);
 
         postsView = (ListView)findViewById(R.id.listView);
 
