@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\mobile\\SimPool\\Android\\slideDateTimePicker\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\selection_divider.9.png",
+        "source": "E:\\mobile\\SimPool\\Android\\slideDateTimePicker\\src\\main\\res\\drawable-hdpi\\selection_divider.9.png"
+    },
+    {
         "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePicker\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\selection_divider.9.png",
         "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePicker\\src\\main\\res\\drawable-hdpi\\selection_divider.9.png"
     },

@@ -32,6 +32,9 @@ public final class R {
 		public static final int fragment_time = 0x7f030003;
 		public static final int slide_date_time_picker = 0x7f030004;
 	}
+	public static final class string {
+		public static final int facebook_app_id = 0x7f060001;
+	}
 	public static final class style {
 		public static final int AppBaseTheme = 0x7f040000;
 		public static final int AppTheme = 0x7f040001;

@@ -19,5 +19,6 @@ int layout fragment_date 0x7f030002
 int layout fragment_time 0x7f030003
 int layout slide_date_time_picker 0x7f030004
 int string app_name 0x7f060000
+int string facebook_app_id 0x7f060001
 int style AppBaseTheme 0x7f040000
 int style AppTheme 0x7f040001
