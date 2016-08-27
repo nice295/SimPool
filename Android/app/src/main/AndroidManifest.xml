@@ -11,15 +11,21 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".SignActivity">
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".NewQuizActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".NewQuizActivity"></activity>
+        <activity android:name=".NewQuizActivity2"></activity>
     </application>
 
 </manifest>
