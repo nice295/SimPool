@@ -11,12 +11,16 @@ import android.widget.Toast;
 import com.github.jjobes.slidedatetimepicker.SlideDateTimeListener;
 import com.github.jjobes.slidedatetimepicker.SlideDateTimePicker;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import io.paperdb.Paper;
+
 public class NewQuizActivity extends AppCompatActivity {
 
-    private SimpleDateFormat mFormatter = new SimpleDateFormat("yyyy MMMM dd aa hh:mm");
+    private SimpleDateFormat mFormatter = new SimpleDateFormat("yyyy MM dd aa hh:mm");
     private Button btTime;
     private Button btNext;
 
@@ -28,10 +32,11 @@ public class NewQuizActivity extends AppCompatActivity {
         @Override
         public void onDateTimeSet(Date date)
         {
-            Toast.makeText(NewQuizActivity.this,
-                    mFormatter.format(date), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(NewQuizActivity.this,
+//                    mFormatter.format(date), Toast.LENGTH_SHORT).show();
 
             btTime.setText(mFormatter.format(date));
+            Paper.book().write("date", date);  //Date
         }
 
         // Optional cancel listener
@@ -50,11 +55,15 @@ public class NewQuizActivity extends AppCompatActivity {
 
         setTitle("내기 추가하기");
 
+        Paper.init(this);
+
         btTime = (Button) findViewById(R.id.btTime);
         btNext = (Button) findViewById(R.id.btNext);
 
-        btTime.setOnClickListener(new View.OnClickListener() {
+        etAddTitle = (EditText) findViewById(R.id.etAddTitle);
+        etAddContent = (EditText) findViewById(R.id.etAddContent);
 
+        btTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
@@ -75,32 +84,13 @@ public class NewQuizActivity extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Paper.book().write("title", etAddTitle.getText().toString()); //String
+                Paper.book().write("content", etAddContent.getText().toString()); //String
+
                 Intent intent = new Intent(NewQuizActivity.this, NewQuizActivity2.class);
                 startActivity(intent);
             }
         });
 
-
-//        final View dialogView = View.inflate(this, R.layout.date_time_picker, null);
-//        final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-//
-//        dialogView.findViewById(R.id.date_time_set).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                DatePicker datePicker = (DatePicker) dialogView.findViewById(R.id.date_picker);
-//                TimePicker timePicker = (TimePicker) dialogView.findViewById(R.id.time_picker);
-//
-//                Calendar calendar = new GregorianCalendar(datePicker.getYear(),
-//                        datePicker.getMonth(),
-//                        datePicker.getDayOfMonth(),
-//                        timePicker.getCurrentHour(),
-//                        timePicker.getCurrentMinute());
-//
-//                long time = calendar.getTimeInMillis();
-//                alertDialog.dismiss();
-//            }});
-//        alertDialog.setView(dialogView);
-//        alertDialog.show();
     }
 }

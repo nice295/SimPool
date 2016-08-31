@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import io.paperdb.Paper;
 
 public class NewQuizActivity2 extends AppCompatActivity {
 
@@ -21,6 +24,10 @@ public class NewQuizActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_new_quiz2);
 
         setTitle("내기 추가하기");
+
+        String sample = Paper.book().read("title");
+        Toast.makeText(this, sample, Toast.LENGTH_SHORT).show();
+
 
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
         radioObj = (RadioButton) findViewById(R.id.radioObj);
