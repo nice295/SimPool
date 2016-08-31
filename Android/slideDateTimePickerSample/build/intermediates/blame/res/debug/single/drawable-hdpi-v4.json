@@ -1,15 +1,7 @@
 [
     {
-        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\selection_divider.9.png",
-        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\drawable-hdpi-v4\\selection_divider.9.png"
-    },
-    {
         "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\selection_divider.9.png",
         "source": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\exploded-aar\\Android\\slideDateTimePicker\\unspecified\\res\\drawable-hdpi-v4\\selection_divider.9.png"
-    },
-    {
-        "merged": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
-        "source": "E:\\mobile\\SimPool\\SimPool\\Android\\slideDateTimePickerSample\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\ProjectFiles\\SimPool\\Android\\SimPool\\Android\\slideDateTimePickerSample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
