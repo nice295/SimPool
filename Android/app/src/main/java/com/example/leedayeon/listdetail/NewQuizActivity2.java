@@ -1,4 +1,4 @@
-package com.example.leedayeon.listdetail;
+﻿package com.example.leedayeon.listdetail;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -23,7 +23,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_quiz2);
 
-        setTitle("내기 추가하기");
+        setTitle("내기 추가하기!!!");
 
         String sample = Paper.book().read("title");
         Toast.makeText(this, sample, Toast.LENGTH_SHORT).show();
