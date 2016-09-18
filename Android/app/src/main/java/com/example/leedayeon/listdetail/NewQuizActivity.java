@@ -8,8 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/** khlee
 import com.github.jjobes.slidedatetimepicker.SlideDateTimeListener;
 import com.github.jjobes.slidedatetimepicker.SlideDateTimePicker;
+*/
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -27,6 +29,7 @@ public class NewQuizActivity extends AppCompatActivity {
     private EditText etAddTitle;
     private EditText etAddContent;
 
+    /** khlee
     private SlideDateTimeListener listener = new SlideDateTimeListener() {
 
         @Override
@@ -47,6 +50,7 @@ public class NewQuizActivity extends AppCompatActivity {
                     "Canceled", Toast.LENGTH_SHORT).show();
         }
     };
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +67,7 @@ public class NewQuizActivity extends AppCompatActivity {
         etAddTitle = (EditText) findViewById(R.id.etAddTitle);
         etAddContent = (EditText) findViewById(R.id.etAddContent);
 
+        /** khlee
         btTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -79,7 +84,7 @@ public class NewQuizActivity extends AppCompatActivity {
                         .show();
             }
         });
-
+         */
 
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override

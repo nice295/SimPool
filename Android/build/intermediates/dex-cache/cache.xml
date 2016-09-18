@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.3.0/8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c/bolts-tasks-1.3.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.3.0_9127a2a2fdfd0d9d530f3d3d98db4ddaf76679ce.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.4.0_5cdbf11caf6bd14e6e75c4a658e75e160dcc22c0.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_2d4ebbb26a540da3efd53ab664cc92d4186b940d.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-9.4.0_c0fe434db556ad552abc7cf7b4afe34e23b219d1.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/kryo/3.0.2/bd8205f54692c419820e6fa78a105db5d34cf655/kryo-3.0.2.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="bd8205f54692c419820e6fa78a105db5d34cf655">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/kryo-3.0.2_c3ae929054670f9efa45cf95b584f4b54597a7b7.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0_0e2bdbe446d281e7d0c0215df39455a5ce6eae0e.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_82487d8cc4601cb4f742449ef86d190ddfbda037.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.4.0_2ac4bf75cf5b86acc7e68d2efe741ddead9bbd81.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-9.4.0_eb3a6e57733cfe7c23bac537ce6da739ab88b049.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_34459725adaad4a92c059b80991427a196e7df0c.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_ad84fef14ef2b497ab4265368805fd2759c3535c.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0_7ff42f84df1335877bf2bf30e992343b6e3a65f3.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_f7422aab5d816e73d0db7472044ceb1591b81be6.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/minlog/1.3.0/ff07b5f1b01d2f92bb00a337f9a94873712f0827/minlog-1.3.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ff07b5f1b01d2f92bb00a337f9a94873712f0827">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/minlog-1.3.0_b429263c5bd9f3c2d59a3ddc122038663f84960f.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/reflectasm/1.10.1/515402cd542ab967a1b5028b4dee1e1800db205b/reflectasm-1.10.1.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="515402cd542ab967a1b5028b4dee1e1800db205b">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/reflectasm-1.10.1_1072cee0ab753f0d60fc76c189efce542649f9f7.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-module-9.4.0_e93e9b517bf03357c6b7e1916e60290e388f1fdb.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/de.javakaffee/kryo-serializers/0.33/e9639b86ee1ea66c3fcb92a339be71483d75856d/kryo-serializers-0.33.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="e9639b86ee1ea66c3fcb92a339be71483d75856d">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/kryo-serializers-0.33_df150d529171eccdbdbf410b442508b9ef1d3745.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-common-9.4.0_2551527062e2d1f893a1456d5b6f59f2d8555282.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.9.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="5c9b831cf63629b8b3873959e52515340484a880">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.9.0_e9b2b9dd4b655d17d24ba544113880779a044c94.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0_7713f87033589cb85ecf03d5b6e792dcedb8f448.jar" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="dcc2193db20e19e1feca8b1240dbbc4e190824fa">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/asm-5.0.3_c22d383865321b3635f3db2d16eba69cfcffff6c.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_42e1a341d70edfe3b79da2b51689e442fc9e9153.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_a93e925ad1872c735efdeaaf7c3a774aa0039b85.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/io.paperdb/paperdb/1.5/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3e007ecbb833e9bfd68ca6e84ace5243d83aa155">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/io.paperdb-paperdb-1.5_feead13521d766232523a4933572415d113f5cfa.jar" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/protobuf-java-2.6.1_5ddc03c901aa315f4c409612112905e7b6e8c3f0.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_84c2e11c52f84f9724586bbd4d8bc74b4646c7c5.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.4.0_9c98cfb7b457fb80f0895713ed922d69a9480ec3.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.4.0_b6d49d0a78ae465b23e3d4b8fce8cfb1cd5979f2.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="87c0ea803b69252868d09308b4618f766f135a96">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/objenesis-2.1_8b103e07e446332bda1468cb43919213cb49e5ad.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0_d6cddad64294cc2c0110cc43d2143971289c89ed.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.3.0/bc535105332645408ef5f1380215cc954b842178/bolts-applinks-1.3.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.3.0_f481edce568af521ccff86927f6b3cd7f22b550e.jar" />
+    </item>
+    <item
+        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-9.4.0_6076e7a0875d70f9941f57e64b83467ffdfdc01e.jar" />
+    </item>
+
+</items>

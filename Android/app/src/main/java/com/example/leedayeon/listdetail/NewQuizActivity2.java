@@ -1,11 +1,10 @@
-﻿package com.example.leedayeon.listdetail;
+package com.example.leedayeon.listdetail;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -36,11 +35,12 @@ public class NewQuizActivity2 extends AppCompatActivity {
         Fragment fragment = new ObjectFragment();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add( R.id.fragment_place, fragment );
+        fragmentTransaction.add(R.id.fragment_place, fragment);
         fragmentTransaction.commit();
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             Fragment fragment;
+
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i) {
@@ -54,15 +54,9 @@ public class NewQuizActivity2 extends AppCompatActivity {
                 }
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace( R.id.fragment_place, fragment);
+                fragmentTransaction.replace(R.id.fragment_place, fragment);
                 fragmentTransaction.commit();
             }
         });
-
-
-
-
-
     }
-
 }
