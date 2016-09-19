@@ -3,9 +3,15 @@ package com.example.leedayeon.listdetail;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -23,11 +29,18 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SignActivity extends AppCompatActivity {
+public class SignActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = "FacebookLogin";
+    private EditText editTextEmail;
+    private EditText editTextPassword;
+    private Button buttonSignin;
+    private TextView textSignup;
+    private ProgressDialog progressDialog;
+    private  LoginButton loginButton;
 
-    private ProgressDialog mProgressDialog;
+    private TextInputLayout mEmailInputLayout;
+    private TextInputLayout mPasswordInputLayout;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -39,6 +52,21 @@ public class SignActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_sign);
+
+        mEmailInputLayout = (TextInputLayout) findViewById(R.id.input_email);
+        mPasswordInputLayout = (TextInputLayout) findViewById(R.id.input_password);
+
+        progressDialog = new ProgressDialog(this);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        buttonSignin = (Button) findViewById(R.id.buttonSignIn);
+        textSignup = (TextView) findViewById(R.id.textSignUp);
+        loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
+
+        mCallbackManager = CallbackManager.Factory.create();
+
+        buttonSignin.setOnClickListener(this);
+        textSignup.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -60,26 +88,7 @@ public class SignActivity extends AppCompatActivity {
             }
         };
 
-        mCallbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
-        loginButton.setReadPermissions("email", "public_profile");
-        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Log.d(TAG, "facebook:onSuccess:" + loginResult);
-                handleFacebookAccessToken(loginResult.getAccessToken());
-            }
 
-            @Override
-            public void onCancel() {
-                Log.d(TAG, "facebook:onCancel");
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Log.d(TAG, "facebook:onError", error);
-            }
-        });
     }
 
     @Override
@@ -96,6 +105,87 @@ public class SignActivity extends AppCompatActivity {
         }
     }
 
+    private void userLogin(){
+
+        String email = editTextEmail.getText().toString();
+        String password = editTextPassword.getText().toString();
+
+        if(!(showError(email, password))){
+
+            return;
+        }
+
+        progressDialog.setMessage("Logging in...");
+        progressDialog.show();
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+
+                        if(task.isSuccessful()){
+                            //start the profile activity
+                            finish();
+                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+                        }
+                        else{
+//                            Toast.makeText(LoginActivity.this, "회원 정보가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+                            mEmailInputLayout.setError("회원 정보가 일치하지 않습니다.");
+                        }
+                    }
+                });
+    }
+    @Override
+    public void onClick(View view) {
+        if (view == buttonSignin) {
+            userLogin();
+        }
+        if (view == textSignup) {
+            finish();
+            startActivity(new Intent(this, RegisterActivity.class));
+        }
+        if (view == loginButton){
+
+            loginButton.setReadPermissions("email", "public_profile");
+            loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+                @Override
+                public void onSuccess(LoginResult loginResult) {
+                    Log.d(TAG, "facebook:onSuccess:" + loginResult);
+                    handleFacebookAccessToken(loginResult.getAccessToken());
+                }
+
+                @Override
+                public void onCancel() {
+                    Log.d(TAG, "facebook:onCancel");
+                }
+
+                @Override
+                public void onError(FacebookException error) {
+                    Log.d(TAG, "facebook:onError", error);
+                }
+            });
+        }
+
+    }
+
+    public boolean showError(String e, String p){
+        mEmailInputLayout.setError(null);
+        mPasswordInputLayout.setError(null);
+
+        if (TextUtils.isEmpty(e)) {
+//            Toast.makeText(LoginActivity.this, "email을 입력해주세요.", Toast.LENGTH_SHORT).show();
+            mEmailInputLayout.setError("email을 입력해주세요.");
+            return false;
+        }
+        if (TextUtils.isEmpty(p)) {
+//            Toast.makeText(LoginActivity.this, "password를 입력해주세요.", Toast.LENGTH_SHORT).show();
+            mPasswordInputLayout.setError("password를 입력해주세요.");
+            return false;
+        }
+        return true;
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

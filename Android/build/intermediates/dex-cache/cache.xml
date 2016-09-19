@@ -2,228 +2,319 @@
 <items version="2" >
 
     <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.3.0/8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c/bolts-tasks-1.3.0.jar"
-        jumboMode="false"
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
         revision="24.0.0"
-        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.3.0_9127a2a2fdfd0d9d530f3d3d98db4ddaf76679ce.jar" />
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_7268f76c158a333a8bab7f9c594cf117b459ab8a\classes.dex" />
     </item>
     <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.4.0_5cdbf11caf6bd14e6e75c4a658e75e160dcc22c0.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_2d4ebbb26a540da3efd53ab664cc92d4186b940d.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-9.4.0_c0fe434db556ad552abc7cf7b4afe34e23b219d1.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/kryo/3.0.2/bd8205f54692c419820e6fa78a105db5d34cf655/kryo-3.0.2.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="bd8205f54692c419820e6fa78a105db5d34cf655">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/kryo-3.0.2_c3ae929054670f9efa45cf95b584f4b54597a7b7.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0_0e2bdbe446d281e7d0c0215df39455a5ce6eae0e.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_82487d8cc4601cb4f742449ef86d190ddfbda037.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="3b7173b3df4c7029699919414400041f64519e34">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.4.0_2ac4bf75cf5b86acc7e68d2efe741ddead9bbd81.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
-        jumboMode="false"
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="24.0.0"
         sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-9.4.0_eb3a6e57733cfe7c23bac537ce6da739ab88b049.jar" />
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.4.0_32d086abc4e3aaec9cee499fdf5f693bb7539862\classes.dex" />
     </item>
     <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_34459725adaad4a92c059b80991427a196e7df0c.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_ad84fef14ef2b497ab4265368805fd2759c3535c.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0_7ff42f84df1335877bf2bf30e992343b6e3a65f3.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_f7422aab5d816e73d0db7472044ceb1591b81be6.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/minlog/1.3.0/ff07b5f1b01d2f92bb00a337f9a94873712f0827/minlog-1.3.0.jar"
-        jumboMode="false"
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\minlog\1.3.0\ff07b5f1b01d2f92bb00a337f9a94873712f0827\minlog-1.3.0.jar"
+        jumboMode="true"
         revision="24.0.0"
         sha1="ff07b5f1b01d2f92bb00a337f9a94873712f0827">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/minlog-1.3.0_b429263c5bd9f3c2d59a3ddc122038663f84960f.jar" />
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\minlog-1.3.0_652240ce3216a4ddc1be3a54eb5d5f41b72ad67e\classes.dex" />
     </item>
     <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/reflectasm/1.10.1/515402cd542ab967a1b5028b4dee1e1800db205b/reflectasm-1.10.1.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="515402cd542ab967a1b5028b4dee1e1800db205b">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/reflectasm-1.10.1_1072cee0ab753f0d60fc76c189efce542649f9f7.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-module-9.4.0_e93e9b517bf03357c6b7e1916e60290e388f1fdb.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/de.javakaffee/kryo-serializers/0.33/e9639b86ee1ea66c3fcb92a339be71483d75856d/kryo-serializers-0.33.jar"
-        jumboMode="false"
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\de.javakaffee\kryo-serializers\0.33\e9639b86ee1ea66c3fcb92a339be71483d75856d\kryo-serializers-0.33.jar"
+        jumboMode="true"
         revision="24.0.0"
         sha1="e9639b86ee1ea66c3fcb92a339be71483d75856d">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/kryo-serializers-0.33_df150d529171eccdbdbf410b442508b9ef1d3745.jar" />
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\kryo-serializers-0.33_2c0482374b21db634c6d86b1f2a29f766af62da8\classes.dex" />
     </item>
     <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
-        jumboMode="false"
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
         revision="24.0.0"
-        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-common-9.4.0_2551527062e2d1f893a1456d5b6f59f2d8555282.jar" />
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_e1448e3b33d04e9f717b1950b583bee702de93c8\classes.dex" />
     </item>
     <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.9.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="5c9b831cf63629b8b3873959e52515340484a880">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.9.0_e9b2b9dd4b655d17d24ba544113880779a044c94.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0_7713f87033589cb85ecf03d5b6e792dcedb8f448.jar" />
-    </item>
-    <item
-        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="dcc2193db20e19e1feca8b1240dbbc4e190824fa">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/asm-5.0.3_c22d383865321b3635f3db2d16eba69cfcffff6c.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_42e1a341d70edfe3b79da2b51689e442fc9e9153.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_a93e925ad1872c735efdeaaf7c3a774aa0039b85.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/io.paperdb/paperdb/1.5/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="3e007ecbb833e9bfd68ca6e84ace5243d83aa155">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/io.paperdb-paperdb-1.5_feead13521d766232523a4933572415d113f5cfa.jar" />
-    </item>
-    <item
-        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/protobuf-java-2.6.1_5ddc03c901aa315f4c409612112905e7b6e8c3f0.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_84c2e11c52f84f9724586bbd4d8bc74b4646c7c5.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.4.0_9c98cfb7b457fb80f0895713ed922d69a9480ec3.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.4.0_b6d49d0a78ae465b23e3d4b8fce8cfb1cd5979f2.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="87c0ea803b69252868d09308b4618f766f135a96">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/objenesis-2.1_8b103e07e446332bda1468cb43919213cb49e5ad.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0_d6cddad64294cc2c0110cc43d2143971289c89ed.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.3.0/bc535105332645408ef5f1380215cc954b842178/bolts-applinks-1.3.0.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="bc535105332645408ef5f1380215cc954b842178">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.3.0_f481edce568af521ccff86927f6b3cd7f22b550e.jar" />
-    </item>
-    <item
-        jar="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
-        jumboMode="false"
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="24.0.0"
         sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
-        <dex dex="/Users/kyuholee/Documents/Hanium/SimPool/Android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-9.4.0_6076e7a0875d70f9941f57e64b83467ffdfdc01e.jar" />
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.4.0_aaaf81249c3c866bcf40cd1b42b695f5317301a3\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.0_b286742273b4d6295e810ea984e437ff9adb1c8d\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="00ed7164cc43b8a3b8eefeadf06087de919de52b">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e4587afe97543a0bf315ef92bb813a974f3e7767\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_38d053f22362fd9fa4d694df39d7352310886364\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.4.0_119136b5c56038c4ddb9e62c02d9ec011dc8c38a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.3.0\8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c\bolts-tasks-1.3.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.3.0_a3a7046962a8b0b2732fe705060a77d0540f44d5\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\reflectasm\1.10.1\515402cd542ab967a1b5028b4dee1e1800db205b\reflectasm-1.10.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="515402cd542ab967a1b5028b4dee1e1800db205b">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\reflectasm-1.10.1_64c83ad285f73c012bf016120ad034199c743185\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="df40261370e38e45a6617716576ee7f8ac17476c">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2a765401f27fc20fec0f9d430ce7ddde73e9c0f2\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.4.0_a2d30e12e68bbc173bc30e049c15c4849b0f9678\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-3.0.0_ae09992eff8af1bc449121ba8adecd468d1b9bc3\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.4.0_59a8a0f5e3fa547ba7b508dcd6ebb687e1ba020e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java\2.6.1\d9521f2aecb909835746b7a5facf612af5e890e8\protobuf-java-2.6.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\protobuf-java-2.6.1_753e4a11a4008c0051ececfb500b88d5937113d6\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.4.0_7ab291330cc31cad7eb79be17079d9f2a067d120\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.4.0_7f8145195d0851ad403038bac96d503125ad5a2d\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.4.0_014e183a9509092a149f7544067482cfd86d9186\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_9d15e2bdb94845395e325ae9d47e1740aaf758f2\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_40d59bb42a018b7b0f277d44a0b12dd455d167cc\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.0_d5a642b118b8c56d1229021b1b53298fc61b33ba\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.4.0_adb0b4b51c29c9e9d1dad4f4a4a265244aba7223\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.4.0_ea37199817993584a178ee839400ef45831e1b88\classes.dex" />
+    </item>
+    <item
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="dcc2193db20e19e1feca8b1240dbbc4e190824fa">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\asm-5.0.3_f4092a029d930cd45366df13192eaa177c2882e8\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_39bd71ecc6a5838bdf3c1eb5767291dfb3e4936c\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.0_1db5458f8d07506eaf224126634d218f31c90404\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.3.0\bc535105332645408ef5f1380215cc954b842178\bolts-applinks-1.3.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.3.0_3e177059989a3894b960ef6be7ffebacc54fe707\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_9f7e88648063421090a31b5724dddc3ca3eb8454\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\kryo\3.0.2\bd8205f54692c419820e6fa78a105db5d34cf655\kryo-3.0.2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="bd8205f54692c419820e6fa78a105db5d34cf655">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\kryo-3.0.2_2098e42d8dd7e6bf14a4806c05f26bea94718f27\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\io.paperdb\paperdb\1.5\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7991a83ee5ffa79aaf221fa21550ad2fae462686">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.paperdb-paperdb-1.5_fcad16df5511a8b93aa5bbe2e0d102d94e925703\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.0_f3bfa35df019440fcaa8ff8ead407f13f6491d42\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_1e6e85baece30e82a06734caa920eb2381f3ca7d\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.4.0_f32f18210de19a0a4fc3a6c5e4198c058b685af4\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_fa0144b7f63280a80ca6d376761240cb85d22b18\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_10e97234481163ba3adb923ceb77c1bdca5fe7a3\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_8343722787afd5a702de8b37fd6e461a2dddd057\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\jiyoung\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.1\87c0ea803b69252868d09308b4618f766f135a96\objenesis-2.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="87c0ea803b69252868d09308b4618f766f135a96">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\objenesis-2.1_7e626c3b175c5a5e3e8290d45ea8d3d4e7dbc744\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_cd0b54e66505697eaed061b6bbb6f60db5973599\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.9.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="5c9b831cf63629b8b3873959e52515340484a880">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.9.0_32860afe190a28939d0a104cda2c0e62fe4f3670\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.4.0_a0ca0852ebb3593df45f4678f6b29cd1a9512ca2\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_33fe9f25cd0c03f060a47d82799a290038e97acc\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.0_e72e52218228903530f8933b13a65caf22a54314\classes.dex" />
+    </item>
+    <item
+        jar="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="C:\ProjectFiles\SimPool\Android\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.0_4c0b1fbd53d358ba84a204a923572b1d632713e1\classes.dex" />
     </item>
 
 </items>
