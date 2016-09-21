@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentB">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="onClick"
+        android:id="@+id/radioG">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:text="보기1"
+            android:id="@+id/radioButton"
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:text="보기2"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:text="보기3"
+            android:id="@+id/radioButton3"
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+    </RadioGroup>
+
+</FrameLayout>
