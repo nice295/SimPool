@@ -65,13 +65,13 @@ public class NewQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Paper.book().write("title", etAddTitle.getText().toString()); //String
-                Paper.book().write("content", etAddContent.getText().toString()); //String
-
-                Paper.book().write("year", mYear);
-                Paper.book().write("month", mMonth);
-                Paper.book().write("day", mDay);
-                Paper.book().write("hour", mHour);
-                Paper.book().write("minute", mMinute);
+                Paper.book().write("description", etAddContent.getText().toString()); //String
+                Paper.book().write("end_time", btDate.getText().toString() + " " + btTime.getText().toString());
+//                Paper.book().write("year", mYear);
+//                Paper.book().write("month", mMonth);
+//                Paper.book().write("day", mDay);
+//                Paper.book().write("hour", mHour);
+//                Paper.book().write("minute", mMinute);
 
                 Intent intent = new Intent(NewQuizActivity.this, NewQuizActivity2.class);
                 startActivity(intent);
