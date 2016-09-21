@@ -24,6 +24,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
 
         setTitle("내기 추가하기!!!");
 
+//        paper로 전의 액티비티에서 전달한 값 읽어오기
         String sample = Paper.book().read("title");
         Toast.makeText(this, sample, Toast.LENGTH_SHORT).show();
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <items version="2" >
 
     <item
@@ -408,3 +409,6 @@
     </item>
 
 </items>
+=======
+<items version="2" />
+>>>>>>> Stashed changes

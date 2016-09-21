@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         etTitle = (EditText)findViewById(R.id.editText);
         etDesc = (EditText)findViewById(R.id.editText2);
-        addBtn = (Button)findViewById(R.id.btTime);
+        addBtn = (Button)findViewById(R.id.pickDate);
 
         postsView = (ListView)findViewById(R.id.listView);
 

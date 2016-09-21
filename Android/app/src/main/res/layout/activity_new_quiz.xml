@@ -58,17 +58,23 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="종료시간"
             android:id="@+id/textView6"
-            android:layout_above="@+id/btTime"
+            android:layout_above="@+id/pickDate"
             android:layout_alignEnd="@+id/textView5" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="지정하기"
-            android:id="@+id/btTime"
+            android:text="날짜설정"
+            android:id="@+id/pickDate"
             android:layout_below="@+id/etAddContent"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="52dp" />
+
+        <Button
+            android:text="시간설정"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pickTime12" />
 
     </LinearLayout>
 
@@ -82,4 +88,12 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
+
+    <!--<DatePicker-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/datePicker"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:datePickerMode="spinner"-->
+        <!--android:calendarViewShown="false"/>-->
 </RelativeLayout>
