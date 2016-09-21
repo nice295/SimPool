@@ -61,8 +61,8 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonSignin = (Button) findViewById(R.id.buttonSignIn);
         textSignup = (TextView) findViewById(R.id.textSignUp);
-        loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
 
+        loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
         mCallbackManager = CallbackManager.Factory.create();
 
         buttonSignin.setOnClickListener(this);
@@ -77,10 +77,10 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
 
-                    Intent intent = new Intent(SignActivity.this, MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    finish();
+//                    Intent intent = new Intent(SignActivity.this, MainActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                    finish();
 
                 } else {
                     Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -88,6 +88,25 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
+        loginButton.setReadPermissions("email", "public_profile");
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d(TAG, "facebook:onSuccess:" + loginResult);
+                handleFacebookAccessToken(loginResult.getAccessToken());
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d(TAG, "facebook:onCancel");
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d(TAG, "facebook:onError", error);
+            }
+        });
 
     }
 
@@ -148,24 +167,7 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (view == loginButton){
 
-            loginButton.setReadPermissions("email", "public_profile");
-            loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
-                @Override
-                public void onSuccess(LoginResult loginResult) {
-                    Log.d(TAG, "facebook:onSuccess:" + loginResult);
-                    handleFacebookAccessToken(loginResult.getAccessToken());
-                }
 
-                @Override
-                public void onCancel() {
-                    Log.d(TAG, "facebook:onCancel");
-                }
-
-                @Override
-                public void onError(FacebookException error) {
-                    Log.d(TAG, "facebook:onError", error);
-                }
-            });
         }
 
     }
