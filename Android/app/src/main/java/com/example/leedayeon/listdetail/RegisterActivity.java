@@ -141,7 +141,7 @@ public boolean showError(String e, String p, String p2){
         if(TextUtils.isEmpty(p2)) {
         mRePasswordInputLayout.setError("password를 재입력해주세요.");
         }
-        if(TextUtils.equals(p, p2)){
+        if(!TextUtils.equals(p, p2)){
         mRePasswordInputLayout.setError("password가 일치하지 않습니다. 다시 입력해주세요");
         }
 
