@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="kryo-serializers-0.33">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.javakaffee/kryo-serializers/0.33/e9639b86ee1ea66c3fcb92a339be71483d75856d/kryo-serializers-0.33.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.javakaffee/kryo-serializers/0.33/ae9ee165caba9206c7f8c7d0dfd9f1f47dbe59c2/kryo-serializers-0.33-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
