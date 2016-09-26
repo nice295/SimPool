@@ -1,29 +1,42 @@
 package com.example.leedayeon.listdetail;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+import android.widget.TextView;
 
-import com.example.leedayeon.listdetail.R;
-
-public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mBtJoin;
+/**
+ * Created by LeeDaYeon on 2016-07-20.
+ */
+public class DetailActivity extends AppCompatActivity {
+    Intent intent;
+    TextView tvTitle;
+    TextView tvDesc;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        mBtJoin = (Button) findViewById(R.id.btJoin);
-        mBtJoin.setOnClickListener(this);
-    }
+        intent = getIntent();
+        Post myPost = (Post)intent.getSerializableExtra("detail");
 
-    @Override
-    public void onClick(View view) {
-        if (view == mBtJoin) {
-            mBtJoin.setText(getString(R.string.joining));
-        }
+        tvTitle = (TextView)findViewById(R.id.textView);
+        tvDesc = (TextView)findViewById(R.id.textView2);
+
+        tvTitle.setText(myPost.getTitle());
+        tvDesc.setText(myPost.getDescription());
+
+
+        ActionBar actionBar = getActionBar();
+        getSupportActionBar().setTitle(myPost.getTitle());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        finish();
+        return  true;
     }
 }
-

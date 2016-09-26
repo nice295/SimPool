@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="시작하기"
-        android:id="@+id/btnStart"
+        android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/fragment_place"

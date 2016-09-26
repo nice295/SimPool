@@ -1,58 +1,27 @@
 {
   "project_info": {
-    "project_number": "608123350788",
-    "firebase_url": "https://simpool-9531d.firebaseio.com",
-    "project_id": "simpool-9531d",
-    "storage_bucket": "simpool-9531d.appspot.com"
+    "project_number": "361163770248",
+    "firebase_url": "https://data-e7749.firebaseio.com",
+    "project_id": "data-e7749",
+    "storage_bucket": "data-e7749.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:608123350788:android:55bebbb8c572cf47",
-        "android_client_info": {
-          "package_name": "com.example.leedayeon.simpool"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "608123350788-9bciplp3fh3n48pnhpfdsam3av83vqrl.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBC8q3j9jhdlAdLbtOP6KnZiJW7qAK0gNU"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:608123350788:android:5baab4e5cb606a5c",
+        "mobilesdk_app_id": "1:361163770248:android:ac538129083b386d",
         "android_client_info": {
           "package_name": "com.example.leedayeon.listdetail"
         }
       },
       "oauth_client": [
         {
-          "client_id": "608123350788-9bciplp3fh3n48pnhpfdsam3av83vqrl.apps.googleusercontent.com",
+          "client_id": "361163770248-c03riksp5lmv6s0c2bd6mejb1s77slfd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBC8q3j9jhdlAdLbtOP6KnZiJW7qAK0gNU"
+          "current_key": "AIzaSyBOTngEaNgmmUVs5qGndRzEAZy5reGl7kE"
         }
       ],
       "services": {
