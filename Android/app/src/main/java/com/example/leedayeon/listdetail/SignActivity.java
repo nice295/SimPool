@@ -19,7 +19,6 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,13 +28,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import io.paperdb.Paper;
 
 public class SignActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -52,10 +44,7 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private FirebaseUser mUser;
 
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference mDatabase = database.getReference();
     private CallbackManager mCallbackManager;
 
     @Override
@@ -75,7 +64,6 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
 
         loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
         mCallbackManager = CallbackManager.Factory.create();
-        findViewById(R.id.button_facebook_signout).setOnClickListener(this);
 
         buttonSignin.setOnClickListener(this);
         textSignup.setOnClickListener(this);
@@ -88,49 +76,18 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    Log.d(TAG, "이름 : " + user.getDisplayName());
-                    Log.d(TAG, "이메일 : " + user.getEmail());
-//                    Log.d(TAG, "사진 : " + user.getPhotoUrl().toString());
 
-                    try{
-                        writeNewUser(user.getUid(), user.getDisplayName(), user.getEmail(), user.getPhotoUrl().toString());
-                    }catch (NullPointerException e){
-                        writeNewUser(user.getUid(), user.getDisplayName(), user.getEmail(), null);
-                    }
-//                    if(user.getPhotoUrl().toString() == null){
-//                        writeNewUser(user.getUid(), user.getDisplayName(), user.getEmail(), null);
-//                    }
-//                    else{
-//                        writeNewUser(user.getUid(), user.getDisplayName(), user.getEmail(), user.getPhotoUrl().toString());
-//                    }
-//                    Intent intent = new Intent(SignActivity.this, MainActivity.class);
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                    startActivity(intent);
-//                    finish();
+                    Intent intent = new Intent(SignActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
 
                 } else {
                     Log.d(TAG, "onAuthStateChanged:signed_out");
-
                 }
             }
         };
 
-        mUser = FirebaseAuth.getInstance().getCurrentUser();
-//        if (mUser == null) {
-//            Intent intent = new Intent(getActivity(), FacebookLoginActivity.class);
-//            startActivity(intent);
-//            getActivity().finish();
-//        }
-
-        if (mUser == null) {
-            return;
-        }
-
-        //mProgressBar.setVisibility(View.VISIBLE);
-
-
-
-        //facebook login
         loginButton.setReadPermissions("email", "public_profile");
         loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
 
@@ -157,14 +114,8 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
-
-
     }
-    private void writeNewUser(String userId, String name, String email, String imageUrl) {
-        User user = new User(name, email, imageUrl);
 
-        mDatabase.child("users").child(userId).setValue(user);
-    }
     @Override
     public void onStop() {
         super.onStop();
@@ -194,7 +145,6 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
 
                         if(task.isSuccessful()){
                             //start the profile activity
-
                             finish();
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
@@ -219,16 +169,9 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
 
 
         }
-        if(view.getId() == R.id.button_facebook_signout){
-            signOut();
-        }
 
     }
-    public void signOut() {
-        mAuth.signOut();
-        LoginManager.getInstance().logOut();
 
-    }
     public boolean showError(String e, String p){
         mEmailInputLayout.setError(null);
         mPasswordInputLayout.setError(null);
