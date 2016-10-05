@@ -39,7 +39,8 @@
         android:id="@+id/editText3"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView8" />
+        android:layout_toEndOf="@+id/textView8"
+        android:hint="input string" />
 
     <EditText
         android:layout_width="wrap_content"

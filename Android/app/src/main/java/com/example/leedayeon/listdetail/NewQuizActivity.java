@@ -12,14 +12,17 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 /** khlee
 import com.github.jjobes.slidedatetimepicker.SlideDateTimeListener;
 import com.github.jjobes.slidedatetimepicker.SlideDateTimePicker;
 */
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import io.paperdb.Paper;
 
@@ -35,8 +38,8 @@ public class NewQuizActivity extends AppCompatActivity {
     static final int TIME_12_DIALOG_ID = 0;
     static final int DATE_DIALOG_ID = 2;
 
+    Calendar end_cal = Calendar.getInstance();
 
-    private SimpleDateFormat mFormatter = new SimpleDateFormat("yyyy MM dd aa hh:mm");
     private Button btTime;
     private Button btDate;
     private Button btNext;
@@ -64,14 +67,13 @@ public class NewQuizActivity extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                test();
+
                 Paper.book().write("title", etAddTitle.getText().toString()); //String
                 Paper.book().write("description", etAddContent.getText().toString()); //String
-                Paper.book().write("end_time", btDate.getText().toString() + " " + btTime.getText().toString());
-//                Paper.book().write("year", mYear);
-//                Paper.book().write("month", mMonth);
-//                Paper.book().write("day", mDay);
-//                Paper.book().write("hour", mHour);
-//                Paper.book().write("minute", mMinute);
+                Paper.book().write("end_time", end_cal.getTimeInMillis()); //Long
+
+//                Toast.makeText(NewQuizActivity.this, Long.toString(end_cal.getTimeInMillis()), Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(NewQuizActivity.this, NewQuizActivity2.class);
                 startActivity(intent);
@@ -144,25 +146,30 @@ public class NewQuizActivity extends AppCompatActivity {
 
     private DatePickerDialog.OnDateSetListener mDateSetListener =
             new DatePickerDialog.OnDateSetListener() {
-
                 public void onDateSet(DatePicker view, int year, int monthOfYear,
                                       int dayOfMonth) {
                     mYear = year;
                     mMonth = monthOfYear;
                     mDay = dayOfMonth;
+                    end_cal.set(Calendar.YEAR, mYear);
+                    end_cal.set(Calendar.MONTH, mMonth);
+                    end_cal.set(Calendar.DATE, mDay);
+//                    Toast.makeText(NewQuizActivity.this, Integer.toString(mDay), Toast.LENGTH_SHORT).show();
                     updateDisplay();
                 }
             };
 
     private TimePickerDialog.OnTimeSetListener mTimeSetListener =
             new TimePickerDialog.OnTimeSetListener() {
-
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                     mHour = hourOfDay;
                     mMinute = minute;
+                    end_cal.set(Calendar.HOUR_OF_DAY, mHour);
+                    end_cal.set(Calendar.MINUTE, mMinute);
                     updateDisplay();
                 }
             };
+
 
     private static String pad(int c) {
         if (c >= 10)
@@ -170,4 +177,19 @@ public class NewQuizActivity extends AppCompatActivity {
         else
             return "0" + String.valueOf(c);
     }
+
+
+    /**     long형으로 시간이 잘 담겨지는지 확인하기 위해 추가한 클래스.Log창 확인(삭제예정)
+    public void test() {
+        long today = end_cal.getTimeInMillis(); // long 형의 현재시간
+        System.out.println(today);
+
+        DateFormat df = new SimpleDateFormat("HH:mm"); // HH=24h, hh=12h
+        String str = df.format(today);
+        System.out.println(str);
+
+        Date date = new Date(today);
+        System.out.println(date);
+    }
+     **/
 }

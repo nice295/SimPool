@@ -1,5 +1,10 @@
 package com.example.leedayeon.listdetail;
 
+import android.widget.DatePicker;
+import android.widget.TimePicker;
+
+import java.sql.Time;
+
 /**
  * Created by yeony_lee on 2016. 9. 21..
  */
@@ -7,16 +12,31 @@ package com.example.leedayeon.listdetail;
 public class NewQuiz {
     private String title;
     private String description;
-    private String end_time;
+    private long end_time;
+    private int is_obj; //객관식(obj)이면 1 주관식(subj)이면 0
+    private String obj_1; //객관식 1번답지
+    private String obj_2; //객관식 2번답지
+    private String subj; //주관식 답지
 
     public NewQuiz() {
 
     }
 
-    public NewQuiz(String title, String description, String end_time) {
-        this.description = description;
+    public NewQuiz(String title, String description, long end_time, int is_obj, String obj_1, String obj_2) {
         this.title = title;
+        this.obj_2 = obj_2;
+        this.obj_1 = obj_1;
+        this.is_obj = is_obj;
         this.end_time = end_time;
+        this.description = description;
+    }
+
+    public NewQuiz(String title, String description, long end_time, int is_obj, String subj) {
+        this.title = title;
+        this.subj = subj;
+        this.is_obj = is_obj;
+        this.end_time = end_time;
+        this.description = description;
     }
 
     public String getDescription() {
@@ -27,12 +47,44 @@ public class NewQuiz {
         this.description = description;
     }
 
-    public String getEnd_time() {
+    public long getEnd_time() {
         return end_time;
     }
 
-    public void setEnd_time(String end_time) {
+    public void setEnd_time(long end_time) {
         this.end_time = end_time;
+    }
+
+    public int getIs_obj() {
+        return is_obj;
+    }
+
+    public void setIs_obj(int is_obj) {
+        this.is_obj = is_obj;
+    }
+
+    public String getObj_1() {
+        return obj_1;
+    }
+
+    public void setObj_1(String obj_1) {
+        this.obj_1 = obj_1;
+    }
+
+    public String getObj_2() {
+        return obj_2;
+    }
+
+    public void setObj_2(String obj_2) {
+        this.obj_2 = obj_2;
+    }
+
+    public String getSubj() {
+        return subj;
+    }
+
+    public void setSubj(String subj) {
+        this.subj = subj;
     }
 
     public String getTitle() {

@@ -6,8 +6,11 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -15,9 +18,20 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Date;
+
 import io.paperdb.Paper;
 
 public class NewQuizActivity2 extends AppCompatActivity {
+
+    private String title;
+    private String description;
+    private long end_time;
+
+    private int is_obj = 1; //객관식(obj)이면 1 주관식(subj)이면 0
+    private String obj_1; //객관식 1번답지
+    private String obj_2; //객관식 2번답지
+    private String subj; //주관식 답지
 
     RadioGroup radioGroup;
     RadioButton radioObj;
@@ -36,10 +50,9 @@ public class NewQuizActivity2 extends AppCompatActivity {
         setTitle("내기 추가하기!!!");
 
 //        paper로 전의 액티비티에서 전달한 값 읽어오기
-        final String title = Paper.book().read("title");
-        final String description = Paper.book().read("description");
-        final String end_time = Paper.book().read("end_time");
-//        Toast.makeText(this, sample, Toast.LENGTH_SHORT).show();
+        title = Paper.book().read("title");
+        description = Paper.book().read("description");
+        end_time = Paper.book().read("end_time");
 
 
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
@@ -51,8 +64,15 @@ public class NewQuizActivity2 extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                NewQuiz nq = new NewQuiz(title, description, end_time);
+                NewQuiz nq = new NewQuiz();
+                if(is_obj == 1) {
+                    obj_1 = ObjectFragment.obj1.getText().toString();
+                    obj_2 = ObjectFragment.obj1.getText().toString();
+                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2);
+                } else if(is_obj == 0){
+                    subj = SubjectFragment.subj.getText().toString();
+                    nq = new NewQuiz(title, description, end_time, is_obj, subj);
+                }
 
 //                myRef.child("games").setValue(nq);
                 myRef.child("games").push().setValue(nq);
@@ -79,9 +99,11 @@ public class NewQuizActivity2 extends AppCompatActivity {
                     default:
                     case R.id.radioObj:
                         fragment = new ObjectFragment();
+                        is_obj = 1;
                         break;
                     case R.id.radioSubj:
                         fragment = new SubjectFragment();
+                        is_obj = 0;
                         break;
                 }
                 FragmentManager fragmentManager = getFragmentManager();
