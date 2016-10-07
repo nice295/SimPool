@@ -17,6 +17,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
         mBtJoin = (Button) findViewById(R.id.btJoin);
         mBtJoin.setOnClickListener(this);
+
     }
 
     @Override

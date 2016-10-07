@@ -59,14 +59,17 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Small Text"
                 android:id="@+id/textViewDate"
-                android:layout_gravity="right"
                 android:layout_below="@+id/textViewDesc"
+                android:layout_alignRight="@+id/imageViewSitu"
+                android:layout_gravity="right"
+                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageViewSitu"
+                android:layout_marginTop="3dp"
                 android:layout_below="@+id/textViewDesc"
                 android:layout_alignParentStart="true" />
 
