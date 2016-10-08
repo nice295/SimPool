@@ -59,16 +59,17 @@ public  class MainActivity extends AppCompatActivity {
 
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, int position) {
+                final int is_obj=post.getIs_obj();
+                final String obj_1=post.getObj_1();
+                final String obj_2=post.getObj_2();
+
                 viewHolder.descView.setText(post.getDescription());
+                viewHolder.dateView.setText(Long.toString(post.getEnd_time()));
 
                 viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.ic_launcher));
                 viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
-                viewHolder.dateView.setText(Long.toString(post.getEnd_time()));
 
                 viewHolder.titleView.setText(post.getTitle());
-
-                Bundle bundle = new Bundle();
-//                bundle = NewQuiz();
                 viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -76,7 +77,18 @@ public  class MainActivity extends AppCompatActivity {
                         intent2.putExtra("title",viewHolder.titleView.getText());
                         intent2.putExtra("desc",viewHolder.descView.getText());
                         intent2.putExtra("title",viewHolder.titleView.getText());
+                        intent2.putExtra("is_obj",is_obj);
+                        intent2.putExtra("obj_1",obj_1);
+                        intent2.putExtra("obj_2",obj_2);
                         startActivity(intent2);
+
+//                        Intent intent3= getIntent();
+//                        String result=intent3.getStringExtra("situ");
+//
+//                        if(result.equals("1"))
+//                            viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
+//                        else
+//                            viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.join));
                     }
                 });
             }
