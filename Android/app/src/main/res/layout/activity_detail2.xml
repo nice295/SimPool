@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.leedayeon.listdetail.DetailActivity2"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:id="@+id/tvTitle"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tvDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
+            android:id="@+id/tvDescription"
+            android:layout_gravity="left|center_vertical"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/imageView" />
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="left|top"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="It&apos;s over!"
+            android:id="@+id/tvMsg"
+            android:layout_below="@+id/tvDescription"
+            android:layout_alignStart="@+id/tvDescription" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item1"
+        android:id="@+id/Item1"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item2"
+        android:id="@+id/Item2"
+        android:layout_below="@+id/Item1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        tools:text="Item2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item3"
+        android:id="@+id/Item3"
+        android:layout_below="@+id/Item2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        tools:text="Item3" />
+
+    <Button
+        android:layout_width="329dp"
+        android:text="enter answer"
+        android:id="@+id/btEnter"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="74dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:onClick="onClick"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

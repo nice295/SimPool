@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".FragmentA">
+        >
 
         <!-- TODO: Update blank fragment layout -->
 
@@ -42,24 +42,52 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescription"
+            android:id="@+id/radioButtons"
+            android:layout_alignStart="@+id/tvDescription"
+            android:layout_marginTop="55dp">
+
+            <RadioButton
+                android:text="Item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Item1"
+                android:layout_weight="1"
+                android:layout_marginTop="0dp" />
+
+            <RadioButton
+                android:text="Item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Item2" />
+
+            <RadioButton
+                android:text="Item3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDescription"
+                android:layout_toEndOf="@+id/radioGroup2"
+                android:layout_marginTop="23dp"
+                android:id="@+id/Item3"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+
     </RelativeLayout>
 
-    <include
-        android:id="@+id/radioButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/layout_radio"
-        android:layout_below="@+id/frameLayout"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp" />
-
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
         android:text="Join"
         android:id="@+id/btJoin"
-        android:layout_alignParentBottom="false"
-        android:layout_centerHorizontal="false"
-         android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_alignStart="@+id/radioGroup2"
+        android:layout_marginTop="72dp"
+        tools:text="Joining" />
 
 </LinearLayout>
