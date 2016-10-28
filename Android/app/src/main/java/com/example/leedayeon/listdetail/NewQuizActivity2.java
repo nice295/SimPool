@@ -67,7 +67,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
                 NewQuiz nq = new NewQuiz();
                 if(is_obj == 1) {
                     obj_1 = ObjectFragment.obj1.getText().toString();
-                    obj_2 = ObjectFragment.obj1.getText().toString();
+                    obj_2 = ObjectFragment.obj2.getText().toString();
                     nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2);
                 } else if(is_obj == 0){
                     subj = SubjectFragment.subj.getText().toString();

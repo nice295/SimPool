@@ -1,12 +1,17 @@
 package com.example.leedayeon.listdetail;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,14 +22,31 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class DetailActivity2 extends AppCompatActivity {
+
 
     private TextView tvTitle;
     private TextView tvDescription;
     private TextView tvMsg;
+    private TextView Item1;
+    private TextView Item2;
 
     private FirebaseListAdapter<NewQuiz> fListAdapter;
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
+
+    private String games_id;
+
+    private String title;
+    private String desc;
+    private String date;
+    private String obj_1;
+    private String obj_2;
+
 
 
     @Override
@@ -34,11 +56,44 @@ public class DetailActivity2 extends AppCompatActivity {
 
         tvTitle = (TextView)findViewById(R.id.tvTitle);
         tvDescription = (TextView)findViewById(R.id.tvDescription);
+        tvMsg = (TextView)findViewById(R.id.tvMsg);
+        Item1 = (TextView)findViewById(R.id.Item1);
+        Item2 = (TextView)findViewById(R.id.Item2);
 
-        myRef.child("games");
         Intent intent2 = getIntent();
-        tvTitle.setText(intent2.getStringExtra("title"));
-        tvDescription.setText(intent2.getStringExtra("desc"));
+        games_id = intent2.getStringExtra("games_id");
+
+
+       // myRef.child("games").child(games_id);
+        myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Map<String, String> map = (Map)dataSnapshot.getValue();
+                title = map.get("title");
+                Log.e("hhahahah", title);
+                tvTitle.setText(title);
+
+               desc = map.get("description");
+               tvDescription.setText(desc);
+
+               // date = map.get("end_time");
+               // tvMsg.setText(date);
+
+                obj_1 = map.get("obj_1");
+                Item1.setText(obj_1);
+
+                obj_2 = map.get("obj_2");
+                Item2.setText(obj_2);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+       // tvTitle.setText(title);
+        //tvDescription.setText(intent2.getStringExtra("desc"));
 
 
 
@@ -47,21 +102,26 @@ public class DetailActivity2 extends AppCompatActivity {
 
 
     public void onClick(View v) {
+
+
         final LinearLayout linear = (LinearLayout)View.inflate(this, R.layout.custom_detail, null);
 
+        new AlertDialog.Builder(this)
+                .setTitle("정답을 입력해 주세요.")
+                .setView(linear)
+                .setPositiveButton("결과 확인", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Toast.makeText(DetailActivity2.this, "입력되었습니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(DetailActivity2.this, DetailActivity3.class);
+                        startActivity(intent);
 
-        new AlertDialog.Builder(this).setTitle("정답을 입력해 주세요.")
-        .setView(linear).setPositiveButton("결과 확인", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-               // Toast.makeText(DetailActivity2.this, "입력되었습니다.", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(DetailActivity2.this, DetailActivity3.class);
-                startActivity(intent);
+                        RadioGroup Items = (RadioGroup)linear.findViewById(R.id.Items);
+                        TextView textView12 = (TextView)linear.findViewById(R.id.textView12);
+                        textView12.setText("앤 내 말을 듣는걸까");
 
-
-            }
-        })
-                .setNegativeButton("취소",null).show();
-
+                    }
+                })
+                .setNegativeButton("취소",null)
+                .show();
     }
 }

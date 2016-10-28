@@ -81,17 +81,6 @@
         android:layout_gravity="center_horizontal"
         tools:text="Item2" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Item3"
-        android:id="@+id/Item3"
-        android:layout_below="@+id/Item2"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        tools:text="Item3" />
-
     <Button
         android:layout_width="329dp"
         android:text="enter answer"
