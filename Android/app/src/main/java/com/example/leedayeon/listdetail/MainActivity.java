@@ -7,18 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.List;
 
 import static com.example.leedayeon.listdetail.R.id.fab;
 import static com.example.leedayeon.listdetail.R.id.start;
@@ -29,7 +24,6 @@ public  class MainActivity extends AppCompatActivity {
 
     private FirebaseRecyclerAdapter<NewQuiz, PostViewHolder> recycleAdapter;
     private DatabaseReference ref;
-
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
         public TextView titleView;
@@ -63,22 +57,8 @@ public  class MainActivity extends AppCompatActivity {
                 PostViewHolder.class,
                 ref.child("games")) {
 
-            public String games_id;
-//            @Override
-//            public void onBindViewHolder(PostViewHolder holder, int position, List<Object> payloads) {
-//                super.onBindViewHolder(holder, position, payloads);
-//                final int pos = position;
-//                holder.titleView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Log.e("ee", recycleAdapter.getRef(pos).getKey());
-//
-//                    }
-//                });
-//            }
-
             @Override
-            protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
+            protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, int position) {
                 final int is_obj=post.getIs_obj();
                 final String obj_1=post.getObj_1();
                 final String obj_2=post.getObj_2();
@@ -93,17 +73,13 @@ public  class MainActivity extends AppCompatActivity {
                 viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //Toast.makeText(MainActivity.this, ,Toast.LENGTH_SHORT).show();
-                        games_id = recycleAdapter.getRef(position).getKey();
-                        Log.e("ee", recycleAdapter.getRef(position).getKey());
-
-                        Intent intent2 = new Intent(getApplicationContext(),DetailActivity2.class);
-                        intent2.putExtra("games_id", games_id);
-//                        intent2.putExtra("desc",viewHolder.descView.getText());
-//                        intent2.putExtra("title",viewHolder.titleView.getText());
-//                        intent2.putExtra("is_obj",is_obj);
-//                        intent2.putExtra("obj_1",obj_1);
-//                        intent2.putExtra("obj_2",obj_2);
+                        Intent intent2 = new Intent(getApplicationContext(),DetailActivity.class);
+                        intent2.putExtra("title",viewHolder.titleView.getText());
+                        intent2.putExtra("desc",viewHolder.descView.getText());
+                        intent2.putExtra("title",viewHolder.titleView.getText());
+                        intent2.putExtra("is_obj",is_obj);
+                        intent2.putExtra("obj_1",obj_1);
+                        intent2.putExtra("obj_2",obj_2);
                         startActivity(intent2);
 
 //                        Intent intent3= getIntent();

@@ -114,11 +114,10 @@ public class DetailActivity2 extends AppCompatActivity {
                         // Toast.makeText(DetailActivity2.this, "입력되었습니다.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(DetailActivity2.this, DetailActivity3.class);
                         startActivity(intent);
-                        /** 은서야 오류난다 -다연
+
                         RadioGroup Items = (RadioGroup)linear.findViewById(R.id.Items);
                         TextView textView12 = (TextView)linear.findViewById(R.id.textView12);
                         textView12.setText("앤 내 말을 듣는걸까");
-                         **/
 
                     }
                 })

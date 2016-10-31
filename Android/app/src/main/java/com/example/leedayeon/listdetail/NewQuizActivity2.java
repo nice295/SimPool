@@ -15,8 +15,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -67,21 +65,18 @@ public class NewQuizActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 NewQuiz nq = new NewQuiz();
-                String owner = getUserId();
-
-                if(is_obj == 1 && owner != null) {
+                if(is_obj == 1) {
                     obj_1 = ObjectFragment.obj1.getText().toString();
                     obj_2 = ObjectFragment.obj2.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2, owner);
-                } else if(is_obj == 0 && owner != null){
+                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2);
+                } else if(is_obj == 0){
                     subj = SubjectFragment.subj.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, subj, owner);
-                } else {
-                    Toast.makeText(NewQuizActivity2.this, "입력값을 제대로 입력하세요", Toast.LENGTH_SHORT).show();
+                    nq = new NewQuiz(title, description, end_time, is_obj, subj);
                 }
 
 //                myRef.child("games").setValue(nq);
                 myRef.child("games").push().setValue(nq);
+
 
                 Intent intent = new Intent(NewQuizActivity2.this, MainActivity.class);
                 startActivity(intent);
@@ -117,19 +112,5 @@ public class NewQuizActivity2 extends AppCompatActivity {
                 fragmentTransaction.commit();
             }
         });
-    }
-
-    public String getUserId() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            // User is signed in
-            Log.e("user id is : ", user.getUid());
-            return user.getUid();
-        } else {
-            // No user is signed in
-            Log.e("user id is : ", user.getUid());
-            return null;
-        }
-
     }
 }

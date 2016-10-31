@@ -17,37 +17,26 @@ public class NewQuiz {
     private String obj_1; //객관식 1번답지
     private String obj_2; //객관식 2번답지
     private String subj; //주관식 답지
-    private String owner;
 
     public NewQuiz() {
 
     }
 
-    public NewQuiz(String title, String description, long end_time, int is_obj, String obj_1, String obj_2, String owner) {
+    public NewQuiz(String title, String description, long end_time, int is_obj, String obj_1, String obj_2) {
         this.title = title;
         this.obj_2 = obj_2;
         this.obj_1 = obj_1;
         this.is_obj = is_obj;
         this.end_time = end_time;
         this.description = description;
-        this.owner = owner;
     }
 
-    public NewQuiz(String title, String description, long end_time, int is_obj, String subj, String owner) {
+    public NewQuiz(String title, String description, long end_time, int is_obj, String subj) {
         this.title = title;
         this.subj = subj;
         this.is_obj = is_obj;
         this.end_time = end_time;
         this.description = description;
-        this.owner = owner;
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String usrId) {
-        this.owner = usrId;
     }
 
     public String getDescription() {
