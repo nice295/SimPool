@@ -51,7 +51,7 @@ public class DetailActivity2 extends AppCompatActivity {
 
     NewQuiz post;
 
-    final Date date = new Date(post.getEnd_time());
+    //final Date date = new Date(post.getEnd_time());
 
 
 
@@ -71,7 +71,7 @@ public class DetailActivity2 extends AppCompatActivity {
         games_id = intent2.getStringExtra("games_id");
 
         SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
-        tvMsg.setText(dt.format(date));
+        //tvMsg.setText(dt.format(date));
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
