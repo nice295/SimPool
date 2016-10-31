@@ -132,12 +132,16 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
             int id = radioButtons.getCheckedRadioButtonId();
             RadioButton rd = (RadioButton)findViewById(id);
-            myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(rd.getText().toString());
+            if(rd == null) {
+                Toast.makeText(DetailActivity.this, "답을 선택하세요!!!", Toast.LENGTH_SHORT).show();
+            } else {
+                myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(rd.getText().toString());
+                mBtJoin.setText(getString(R.string.joining));
+                mBtJoin.setEnabled(false);
+                Item1.setEnabled(false);
+                Item2.setEnabled(false);
+            }
 
-            mBtJoin.setText(getString(R.string.joining));
-            mBtJoin.setEnabled(false);
-            Item1.setEnabled(false);
-            Item2.setEnabled(false);
             //Item3.setEnabled(false);
 
 //            Map<String, Object> childUpdates = new HashMap<>();

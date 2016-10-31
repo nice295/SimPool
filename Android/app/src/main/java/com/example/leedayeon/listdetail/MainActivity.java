@@ -97,7 +97,7 @@ public  class MainActivity extends AppCompatActivity {
                         games_id = recycleAdapter.getRef(position).getKey();
                         Log.e("ee", recycleAdapter.getRef(position).getKey());
 
-                        Intent intent2 = new Intent(getApplicationContext(),DetailActivity2.class);
+                        Intent intent2 = new Intent(getApplicationContext(),DetailActivity.class);
                         intent2.putExtra("games_id", games_id);
 //                        intent2.putExtra("desc",viewHolder.descView.getText());
 //                        intent2.putExtra("title",viewHolder.titleView.getText());
