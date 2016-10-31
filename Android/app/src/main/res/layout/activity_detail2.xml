@@ -90,8 +90,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="72dp"
-        android:onClick="onClick"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="onClick (DetailActivity2)" />
 
 
 </LinearLayout>

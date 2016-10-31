@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -37,6 +38,7 @@ public class DetailActivity2 extends AppCompatActivity {
     private TextView tvMsg;
     private TextView Item1;
     private TextView Item2;
+    private Button btEnter;
 
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
 
@@ -51,7 +53,7 @@ public class DetailActivity2 extends AppCompatActivity {
 
     NewQuiz post;
 
-    final Date date = new Date(post.getEnd_time());
+    //final Date date = new Date(post.getEnd_time());
 
 
 
@@ -65,13 +67,14 @@ public class DetailActivity2 extends AppCompatActivity {
         tvMsg = (TextView)findViewById(R.id.tvMsg);
         Item1 = (TextView)findViewById(R.id.Item1);
         Item2 = (TextView)findViewById(R.id.Item2);
+        btEnter = (Button)findViewById(R.id.btEnter);
 
 
         Intent intent2 = getIntent();
         games_id = intent2.getStringExtra("games_id");
 
-        SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
-        tvMsg.setText(dt.format(date));
+      //  SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
+       // tvMsg.setText(dt.format(date));
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
@@ -103,52 +106,51 @@ public class DetailActivity2 extends AppCompatActivity {
        // tvTitle.setText(title);
         //tvDescription.setText(intent2.getStringExtra("desc"));
 
-
-
-    }
-
-
-
-    public void onClick(View v) {
-
-
-        //final LinearLayout linear = (LinearLayout)View.inflate(this, R.layout.custom_detail, null);
-
-//        new AlertDialog.Builder(this)
-//                .setTitle("정답을 입력해 주세요.")
-//                .setView(linear)
-//                .setPositiveButton("결과 확인", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        // Toast.makeText(DetailActivity2.this, "입력되었습니다.", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(DetailActivity2.this, DetailActivity3.class);
-//                        startActivity(intent);
-//
-//                        RadioGroup Items = (RadioGroup)linear.findViewById(R.id.Items);
-//                        TextView textView12 = (TextView)linear.findViewById(R.id.textView12);
-//                        textView12.setText("앤 내 말을 듣는걸까");
-//
-//                    }
-//                })
-//                .setNegativeButton("취소",null)
-//                .show();
-
-        final String str[] = {obj_1,obj_2};
-        new AlertDialog.Builder(this)
-                .setTitle("정답을 입력해 주세요.")
-                .setPositiveButton("입력",
-                        new DialogInterface.OnClickListener() {
+        btEnter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String str[] = {obj_1,obj_2};
+                new AlertDialog.Builder(DetailActivity2.this)
+                        .setTitle("정답을 입력해 주세요.")
+                        .setPositiveButton("입력", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 myRef.child("games").child(games_id).child("right_answer").setValue(str[temp]);
                                 Toast.makeText(getApplicationContext(), str[temp] + "선택", Toast.LENGTH_SHORT).show();
                             }
                         })
-                .setNegativeButton("취소", null)
-                .setSingleChoiceItems
-                        (str, -1, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        temp = which;
-                                    }
-                                });
+                        .setNegativeButton("취소", null)
+                        .setSingleChoiceItems(str, -1, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                temp = which;
+                            }
+                        })
+                        .show();
+            }
+        });
+
+
 
     }
+
+
+//
+//    public void onClick(View v) {
+//        final String str[] = {obj_1,obj_2};
+//        new AlertDialog.Builder(this)
+//                .setTitle("정답을 입력해 주세요.")
+//                .setPositiveButton("입력", new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                myRef.child("games").child(games_id).child("right_answer").setValue(str[temp]);
+//                                Toast.makeText(getApplicationContext(), str[temp] + "선택", Toast.LENGTH_SHORT).show();
+//                            }
+//                        })
+//                .setNegativeButton("취소", null)
+//                .setSingleChoiceItems(str, -1, new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog, int which) {
+//                                        temp = which;
+//                                    }
+//                                })
+//                .show();
+//
+//    }
 }
