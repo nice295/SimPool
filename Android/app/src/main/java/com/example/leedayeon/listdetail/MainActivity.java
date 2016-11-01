@@ -14,10 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import static com.example.leedayeon.listdetail.R.id.fab;
@@ -30,6 +33,8 @@ public  class MainActivity extends AppCompatActivity {
     private FirebaseRecyclerAdapter<NewQuiz, PostViewHolder> recycleAdapter;
     private DatabaseReference ref;
 
+    private FirebaseAuth mAuth;
+    FirebaseUser user;
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
         public TextView titleView;
@@ -52,6 +57,9 @@ public  class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
 
         recyclerView = (RecyclerView) findViewById(R.id.messageRecyclerView);
         layoutManager = new LinearLayoutManager(this);
@@ -79,42 +87,46 @@ public  class MainActivity extends AppCompatActivity {
 
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
-                final int is_obj=post.getIs_obj();
-                final String obj_1=post.getObj_1();
-                final String obj_2=post.getObj_2();
+                SimpleDateFormat date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
+
+                String owner =post.getOwner();
+                Log.e("SSUID",user.getUid());
+                Log.e("SSOWNER",owner);
 
                 viewHolder.descView.setText(post.getDescription());
-                viewHolder.dateView.setText(Long.toString(post.getEnd_time()));
+                viewHolder.dateView.setText(date.format(post.getEnd_time()));
 
-                viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.ic_launcher));
                 viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
-
                 viewHolder.titleView.setText(post.getTitle());
-                viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //Toast.makeText(MainActivity.this, ,Toast.LENGTH_SHORT).show();
-                        games_id = recycleAdapter.getRef(position).getKey();
-                        Log.e("ee", recycleAdapter.getRef(position).getKey());
 
-                        Intent intent2 = new Intent(getApplicationContext(),DetailActivity.class);
-                        intent2.putExtra("games_id", games_id);
-//                        intent2.putExtra("desc",viewHolder.descView.getText());
-//                        intent2.putExtra("title",viewHolder.titleView.getText());
-//                        intent2.putExtra("is_obj",is_obj);
-//                        intent2.putExtra("obj_1",obj_1);
-//                        intent2.putExtra("obj_2",obj_2);
-                        startActivity(intent2);
+                if(user.getUid().equals(owner)) {
+                    viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.crown));
+                    viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            games_id = recycleAdapter.getRef(position).getKey();
+                            Log.e("ee", recycleAdapter.getRef(position).getKey());
 
-//                        Intent intent3= getIntent();
-//                        String result=intent3.getStringExtra("situ");
-//
-//                        if(result.equals("1"))
-//                            viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
-//                        else
-//                            viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.join));
-                    }
-                });
+                            Intent intent2 = new Intent(getApplicationContext(), DetailActivity2.class);
+                            intent2.putExtra("games_id", games_id);
+                            startActivity(intent2);
+                        }
+                    });
+                }
+                else {
+                    viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.ic_launcher));
+                    viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            games_id = recycleAdapter.getRef(position).getKey();
+                            Log.e("ee", recycleAdapter.getRef(position).getKey());
+
+                            Intent intent2 = new Intent(getApplicationContext(), DetailActivity.class);
+                            intent2.putExtra("games_id", games_id);
+                            startActivity(intent2);
+                        }
+                    });
+                }
             }
         };
 

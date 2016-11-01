@@ -2,418 +2,400 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\io.paperdb\paperdb\1.5\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="7991a83ee5ffa79aaf221fa21550ad2fae462686">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.paperdb-paperdb-1.5_0f2d78c035dd3659a77935b4e9f99186ac41fe26\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\io.paperdb-paperdb-1.5_0f2d78c035dd3659a77935b4e9f99186ac41fe26.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.0_2304c9ce139d6e81e14e009ee49d8af0fb522d69\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.3.0\bc535105332645408ef5f1380215cc954b842178\bolts-applinks-1.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="bc535105332645408ef5f1380215cc954b842178">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.3.0_85746730139cf0c1996a4ab748bc0b4cc1dca0ea\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.4.0_42429dc64d5de1a73d33a9f256ee5525c071961c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\minlog\1.3.0\ff07b5f1b01d2f92bb00a337f9a94873712f0827\minlog-1.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="ff07b5f1b01d2f92bb00a337f9a94873712f0827">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\minlog-1.3.0_505011603babf66cc71c8c149990533da93617e0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_1749efea915a7e656748a5d401bf3157663b072c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.3.0\8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c\bolts-tasks-1.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.3.0_0b751df1e3104ae61cf32d10bebea6223f21c616\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.4.0_eba861b58d8ed965521b84e2ef3c037afdbcab31\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_1d2c097129c392d4e60c18dbfbc4cfb19da96382\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_1d2c097129c392d4e60c18dbfbc4cfb19da96382.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.4.0_42429dc64d5de1a73d33a9f256ee5525c071961c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.4.0_70229ee7bde591b9f9cba9e9382d93ccbc985426\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.4.0_70229ee7bde591b9f9cba9e9382d93ccbc985426.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\de.javakaffee\kryo-serializers\0.33\e9639b86ee1ea66c3fcb92a339be71483d75856d\kryo-serializers-0.33.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\minlog\1.3.0\ff07b5f1b01d2f92bb00a337f9a94873712f0827\minlog-1.3.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="e9639b86ee1ea66c3fcb92a339be71483d75856d">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\kryo-serializers-0.33_c7aa3c1db1f9cba0f3c76168088e2600dcea1671\classes.dex" />
+        sha1="ff07b5f1b01d2f92bb00a337f9a94873712f0827">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\minlog-1.3.0_505011603babf66cc71c8c149990533da93617e0.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.3.0\8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c\bolts-tasks-1.3.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_2e69ef6fb2bd1d0fc1671450e5c006f20dcee90c\classes.dex" />
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.3.0_0b751df1e3104ae61cf32d10bebea6223f21c616.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.0_806e4b0465a26702637c7bf1d119e184cb37d2ef\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="dcc2193db20e19e1feca8b1240dbbc4e190824fa">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\asm-5.0.3_f4092a029d930cd45366df13192eaa177c2882e8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.4.0_0a82d1bc7673697dec16820e41e26b3abe2e9053\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.4.0_0a82d1bc7673697dec16820e41e26b3abe2e9053.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\protobuf\protobuf-java\2.6.1\protobuf-java-2.6.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\protobuf-java-2.6.1_1438358bbc200c2d9c821dc36008b3295d11df95\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_c2a6ee62f3cdfb00da0fd12969359cd91831ad17\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.0_c2a6ee62f3cdfb00da0fd12969359cd91831ad17.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\protobuf\protobuf-java\2.6.1\protobuf-java-2.6.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\protobuf-java-2.6.1_1438358bbc200c2d9c821dc36008b3295d11df95.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="dcc2193db20e19e1feca8b1240dbbc4e190824fa">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\asm-5.0.3_f4092a029d930cd45366df13192eaa177c2882e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-3.0.0_c5d5e6e10d9c004ea772d2b584f46f9955a2872a\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_c5d5e6e10d9c004ea772d2b584f46f9955a2872a.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\LG_note1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="5e6925b43acbd5ceb7ddfb10f0ddd6d34961ca88">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1f6fba6fd1840f3a640686af6cdda5beac4a69ea\classes.dex" />
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.0_806e4b0465a26702637c7bf1d119e184cb37d2ef.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\reflectasm\1.10.1\515402cd542ab967a1b5028b4dee1e1800db205b\reflectasm-1.10.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="515402cd542ab967a1b5028b4dee1e1800db205b">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\reflectasm-1.10.1_c8873d7a2b0f7fc52f9b0a2c324aa9bc026ae884\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_8938544d844b4084512c055b64a27ddade40795f\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_8938544d844b4084512c055b64a27ddade40795f.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_4fb5eece3fd4820b5f1cd29ab9d5a6cb7be73c92\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\kryo\3.0.2\bd8205f54692c419820e6fa78a105db5d34cf655\kryo-3.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="bd8205f54692c419820e6fa78a105db5d34cf655">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\kryo-3.0.2_533cbc3a9e8ee416cab45e40bbca6464651c3507\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.0_9bbd6243fa01b46e903014b3ec387b332a717081\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.4.0_1244bad70b54c5184e8ebbc37ca27ff1b9394c64\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.4.0_1244bad70b54c5184e8ebbc37ca27ff1b9394c64.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.4.0_84318e3998315d5acdfdb4fc4991b99434f38187\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_6bc69cd57e7878650c98dd7efc21b1ca384f7aa7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_8aaeeb0473b60328c67e604e4fc5e7026287d2e0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.4.0_87503d8cb1b551b5d3d0b03c9d4b1f088d2fec25\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-9.4.0_87503d8cb1b551b5d3d0b03c9d4b1f088d2fec25.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.1\87c0ea803b69252868d09308b4618f766f135a96\objenesis-2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="87c0ea803b69252868d09308b4618f766f135a96">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\objenesis-2.1_d9cee53ce03176fb793a557ac903c41fbac901e8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="c76f6507a42aec274953e882bf3c49a570843ef5">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.firebaseui-firebase-ui-database-0.4.0_c573b7f70970b7845d5e3b31d86254734a9579c2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.0_04c5c85fd3e81fedb2c06a36653d10d60b5ae975\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.0_04c5c85fd3e81fedb2c06a36653d10d60b5ae975.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_6eeefc86fd9e6a70e56fa0dcf3e8ade8e5e88161\classes.dex" />
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-multidex-1.0.1_8aaeeb0473b60328c67e604e4fc5e7026287d2e0.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="3b7173b3df4c7029699919414400041f64519e34">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.4.0_ea7afff136d0015155c0f30c9701e70e678ac57e\classes.dex" />
+        sha1="c76f6507a42aec274953e882bf3c49a570843ef5">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.firebaseui-firebase-ui-database-0.4.0_c573b7f70970b7845d5e3b31d86254734a9579c2.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.4.0_df2e1a146e4955ecbc554667a2db5fa320764aad\classes.dex" />
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.0_9bbd6243fa01b46e903014b3ec387b332a717081.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\kryo\3.0.2\bd8205f54692c419820e6fa78a105db5d34cf655\kryo-3.0.2.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_54c46b2b7c6a39d9c409b5b5e12dcf49b105ebdc\classes.dex" />
+        sha1="bd8205f54692c419820e6fa78a105db5d34cf655">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\kryo-3.0.2_533cbc3a9e8ee416cab45e40bbca6464651c3507.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.0_620502c52a6eca449de45d33c01cc8af32ff5579\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.4.0_0fc94fcc56b7e4c276f114fb25626724b78ed3bf\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.4.0_1f7b0d81015639ab412ae472a95f8a808dd550a5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.0_072f574559d77575943b839132a2ac4047fcd485\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.0_072f574559d77575943b839132a2ac4047fcd485.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_b0b26fd6b19666a116c4a34473101da0f50391a7\classes.dex" />
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.0_6bc69cd57e7878650c98dd7efc21b1ca384f7aa7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.4.0_53fd4a549fe20bcf1f272e0771a6699196883072\classes.dex" />
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_54c46b2b7c6a39d9c409b5b5e12dcf49b105ebdc.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_c3a4aefa7ff7dd5ae04c490a9b0792b3eea3b3de\classes.dex" />
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.4.0_84318e3998315d5acdfdb4fc4991b99434f38187.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.0.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="8dd49930e4f9dde1a42d37e362b9fea8b1b69c0d">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.0.0_5597a6a27a851101b4cc5a35378c869ce4e594ce\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-24.0.0_5597a6a27a851101b4cc5a35378c869ce4e594ce.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\mobile\SimPool\Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
-        sha1="565c8c33ed9def624d0e64a3476d01e0acf07b41">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_609e44d66e39f7976bef2abd6806765206f37f61\classes.dex" />
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.0_c3a4aefa7ff7dd5ae04c490a9b0792b3eea3b3de.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.4.0_0fc94fcc56b7e4c276f114fb25626724b78ed3bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.3.0\bc535105332645408ef5f1380215cc954b842178\bolts-applinks-1.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.3.0_85746730139cf0c1996a4ab748bc0b4cc1dca0ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.0_2304c9ce139d6e81e14e009ee49d8af0fb522d69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\de.javakaffee\kryo-serializers\0.33\e9639b86ee1ea66c3fcb92a339be71483d75856d\kryo-serializers-0.33.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e9639b86ee1ea66c3fcb92a339be71483d75856d">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\kryo-serializers-0.33_c7aa3c1db1f9cba0f3c76168088e2600dcea1671.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.0_1749efea915a7e656748a5d401bf3157663b072c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.4.0_eba861b58d8ed965521b84e2ef3c037afdbcab31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.0_2e69ef6fb2bd1d0fc1671450e5c006f20dcee90c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\com.esotericsoftware\reflectasm\1.10.1\515402cd542ab967a1b5028b4dee1e1800db205b\reflectasm-1.10.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="515402cd542ab967a1b5028b4dee1e1800db205b">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\reflectasm-1.10.1_c8873d7a2b0f7fc52f9b0a2c324aa9bc026ae884.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_4fb5eece3fd4820b5f1cd29ab9d5a6cb7be73c92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_6eeefc86fd9e6a70e56fa0dcf3e8ade8e5e88161.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.0_b0b26fd6b19666a116c4a34473101da0f50391a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.4.0_ea7afff136d0015155c0f30c9701e70e678ac57e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-module-9.4.0_df2e1a146e4955ecbc554667a2db5fa320764aad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.0_620502c52a6eca449de45d33c01cc8af32ff5579.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-common-9.4.0_1f7b0d81015639ab412ae472a95f8a808dd550a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\LG_note1\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.1\87c0ea803b69252868d09308b4618f766f135a96\objenesis-2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="87c0ea803b69252868d09308b4618f766f135a96">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\objenesis-2.1_d9cee53ce03176fb793a557ac903c41fbac901e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.4.0_53fd4a549fe20bcf1f272e0771a6699196883072.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\mobile\SimPool\Android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.9.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.0"
         sha1="5c9b831cf63629b8b3873959e52515340484a880">
-        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.9.0_9c74daa6a5273ed28382c70b0a500e760afc3c09\classes.dex" />
+        <dex dex="C:\mobile\SimPool\Android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-android-sdk-4.9.0_9c74daa6a5273ed28382c70b0a500e760afc3c09.jar" />
     </item>
 
 </items>
