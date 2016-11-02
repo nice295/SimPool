@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DetailSubjectActivity extends AppCompatActivity implements View.OnClickListener {
+public class DetailSubjectActivity extends AppCompatActivity  {
 
     private Button mBtJoin;
 
@@ -114,28 +114,36 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
 
 
         mBtJoin = (Button) findViewById(R.id.btJoin);
-        //mBtJoin.setOnClickListener(this);
-        //여기 오류생기는 건 좀 찾아봐야할것 같아..;; 고대로 복붙했는데 오류나서
+        mBtJoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == mBtJoin) {
+
+                    EditText answer = (EditText)findViewById(R.id.answer);
+
+                    myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(answer.getText().toString());
+                    mBtJoin.setText(getString(R.string.joining));
+                    mBtJoin.setEnabled(false);
+                    answer.setEnabled(false);
+
+                }
+            }
+        });
+       // 여기 오류생기는 건 좀 찾아봐야할것 같아..;; 고대로 복붙했는데 오류나서
     }
 
 
-    @Override
-    public void onClick(View view) {
-        if (view == mBtJoin) {
-
-                myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(answer.getText().toString());
-                mBtJoin.setText(getString(R.string.joining));
-                mBtJoin.setEnabled(false);
-
-            //Item3.setEnabled(false);
-
-//            Map<String, Object> childUpdates = new HashMap<>();
-//            childUpdates.put("/games/" + games_id, result);
+//    //@Override
+//    public void onClick(View view) {
+//        if (view == mBtJoin) {
 //
-//            myRef.updateChildren(childUpdates);
-//            myRef.child("games").child(games_id).child("owner").setValue("dongduk");
-
-
-        }
-    }
+//            EditText answer = (EditText)findViewById(R.id.answer);
+//
+//            myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(answer.getText().toString());
+//            mBtJoin.setText(getString(R.string.joining));
+//            mBtJoin.setEnabled(false);
+//            answer.setEnabled(false);
+//
+//        }
+//    }
 }

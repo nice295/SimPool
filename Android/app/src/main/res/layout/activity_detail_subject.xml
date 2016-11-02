@@ -72,13 +72,14 @@
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:text="Join"
-        android:id="@+id/button3"
+        android:id="@+id/btJoin"
         android:layout_gravity="center"
         android:clickable="false"
         android:layout_below="@+id/radioGroup2"
         android:layout_alignStart="@+id/radioGroup2"
         android:layout_marginTop="72dp"
-        tools:text="Joining" />
+        tools:text="Joining"
+        android:onClick="onClick (DetailSubjectActivity)" />
 
 
 </LinearLayout>
