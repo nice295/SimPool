@@ -114,8 +114,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
 
 
         mBtJoin = (Button) findViewById(R.id.btJoin);
-        //mBtJoin.setOnClickListener(this);
-        //여기 오류생기는 건 좀 찾아봐야할것 같아..;; 고대로 복붙했는데 오류나서
+        mBtJoin.setOnClickListener(this);
     }
 
 
