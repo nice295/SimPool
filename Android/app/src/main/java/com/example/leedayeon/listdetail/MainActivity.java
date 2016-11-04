@@ -17,14 +17,18 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Map;
 
 import static com.example.leedayeon.listdetail.R.id.fab;
 import static com.example.leedayeon.listdetail.R.id.start;
+import static java.sql.Types.NULL;
 
 public  class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -35,6 +39,8 @@ public  class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     FirebaseUser user;
+
+    private int is_obj=1;
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
         public TextView titleView;
@@ -107,9 +113,32 @@ public  class MainActivity extends AppCompatActivity {
                             games_id = recycleAdapter.getRef(position).getKey();
                             Log.e("ee", recycleAdapter.getRef(position).getKey());
 
-                            Intent intent2 = new Intent(getApplicationContext(), DetailActivity2.class);
-                            intent2.putExtra("games_id", games_id);
-                            startActivity(intent2);
+                            ref.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    Map<String, String> map = (Map)dataSnapshot.getValue();
+                                    is_obj = Integer.parseInt(String.valueOf(map.get("is_obj")));
+
+                                    if(is_obj == 1) {
+                                        Intent intent2 = new Intent(getApplicationContext(), DetailActivity2.class);
+                                        intent2.putExtra("games_id", games_id);
+                                        startActivity(intent2);
+                                    } else if(is_obj == 0){
+                                        Intent intent2 = new Intent(getApplicationContext(), DetailSubjectActivity2.class);
+                                        intent2.putExtra("games_id", games_id);
+                                        startActivity(intent2);
+                                    }
+
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+
+
                         }
                     });
                 }
@@ -121,9 +150,30 @@ public  class MainActivity extends AppCompatActivity {
                             games_id = recycleAdapter.getRef(position).getKey();
                             Log.e("ee", recycleAdapter.getRef(position).getKey());
 
-                            Intent intent2 = new Intent(getApplicationContext(), DetailActivity.class);
-                            intent2.putExtra("games_id", games_id);
-                            startActivity(intent2);
+                            ref.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    Map<String, String> map = (Map)dataSnapshot.getValue();
+                                    is_obj = Integer.parseInt(String.valueOf(map.get("is_obj")));
+
+                                    if(is_obj == 1) {
+                                        Intent intent2 = new Intent(getApplicationContext(), DetailActivity.class);
+                                        intent2.putExtra("games_id", games_id);
+                                        startActivity(intent2);
+                                    } else if(is_obj == 0 ){
+                                        Intent intent2 = new Intent(getApplicationContext(), DetailSubjectActivity.class);
+                                        intent2.putExtra("games_id", games_id);
+                                        startActivity(intent2);
+                                    }
+
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
                         }
                     });
                 }
