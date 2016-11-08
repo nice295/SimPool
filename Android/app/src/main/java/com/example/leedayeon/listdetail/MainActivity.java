@@ -22,7 +22,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -39,6 +42,12 @@ public  class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     FirebaseUser user;
+
+    SimpleDateFormat date;
+    Calendar cal_today = Calendar.getInstance();
+    boolean is_over;
+    boolean is_end;
+    String end;
 
     private int is_obj=1;
 
@@ -93,7 +102,7 @@ public  class MainActivity extends AppCompatActivity {
 
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
-                SimpleDateFormat date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
+                date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
 
                 String owner =post.getOwner();
                 Log.e("SSUID",user.getUid());
@@ -118,7 +127,6 @@ public  class MainActivity extends AppCompatActivity {
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     Map<String, String> map = (Map)dataSnapshot.getValue();
                                     is_obj = Integer.parseInt(String.valueOf(map.get("is_obj")));
-
                                     if(is_obj == 1) {
                                         Intent intent2 = new Intent(getApplicationContext(), DetailActivity2.class);
                                         intent2.putExtra("games_id", games_id);
@@ -136,13 +144,10 @@ public  class MainActivity extends AppCompatActivity {
 
                                 }
                             });
-
-
-
                         }
                     });
                 }
-                else {
+                else { //방장이 아니라 참여자 신분
                     viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.ic_launcher));
                     viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -156,14 +161,20 @@ public  class MainActivity extends AppCompatActivity {
                                     Map<String, String> map = (Map)dataSnapshot.getValue();
                                     is_obj = Integer.parseInt(String.valueOf(map.get("is_obj")));
 
-                                    if(is_obj == 1) {
+                                    long time = Long.parseLong(String.valueOf(map.get("end_time")));
+                                    end = date.format(time);
+                                    is_end = is_end_time(end);
+
+                                    if(is_obj == 1 && is_end == true) {
                                         Intent intent2 = new Intent(getApplicationContext(), DetailActivity.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
-                                    } else if(is_obj == 0 ){
+                                    } else if(is_obj == 0 && is_end == true){
                                         Intent intent2 = new Intent(getApplicationContext(), DetailSubjectActivity.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
                                     }
 
                                 }
@@ -192,5 +203,23 @@ public  class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    /**시간이 마감되었는지 아닌지 비교하는 메소드**/
+    public boolean is_end_time(String str_end) {
+        try {
+            long today_time = cal_today.getTimeInMillis();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
+            Date date_today = new Date(today_time); //오늘날짜 세팅
+
+            String str = str_end;
+            Date date_end = dateFormat.parse(str);
+
+            is_over = date_end.after(date_today); //시간이 over되지 않으면 true, over이면 false
+        } catch (java.text.ParseException e) {
+            e.printStackTrace();
+        }
+
+        return is_over;
     }
 }
