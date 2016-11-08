@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.leedayeon.listdetail.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.api.model.StringList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +41,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     private String desc;
     private String obj_1;
     private String obj_2;
-
+    private String obj1_num;
+    private String obj2_num;
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth mAuth;
     FirebaseUser user;
@@ -70,6 +72,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+
                 Map<String, String> map = (Map)dataSnapshot.getValue();
                 title = map.get("title");
                 tvTitle.setText(title);
@@ -86,6 +90,21 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
                 obj_2 = map.get("obj_2");
                 Item2.setText(obj_2);
+
+                Map<String, String> obj_map = (Map)dataSnapshot.child("num").getValue();
+                try {
+                    obj1_num = obj_map.get("obj_1");
+                }catch (NullPointerException e){
+                    obj1_num = String.valueOf(0);
+                }
+                try{
+                    obj2_num = obj_map.get("obj_2");
+                }catch (NullPointerException e){
+                    obj2_num = String.valueOf(0);
+                }
+
+
+
 
             }
 
@@ -132,18 +151,23 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
             int id = radioButtons.getCheckedRadioButtonId();
             RadioButton rd = (RadioButton)findViewById(id);
-            if(rd == null) {
-                Toast.makeText(DetailActivity.this, "답을 선택하세요!!!", Toast.LENGTH_SHORT).show();
-            } else {
+            if(rd == null){
+                Toast.makeText(this, "답안을 입력하세요", Toast.LENGTH_SHORT).show();
+            }
+            else {
                 myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(rd.getText().toString());
+                if (rd.getText().equals(obj_1))
+                    myRef.child("games").child(games_id).child("num").child("obj_1").setValue(String.valueOf(Integer.parseInt(obj1_num) + 1));
+                else
+                    myRef.child("games").child(games_id).child("num").child("obj_2").setValue(String.valueOf(Integer.parseInt(obj2_num) + 1));
+
+
                 mBtJoin.setText(getString(R.string.joining));
                 mBtJoin.setEnabled(false);
                 Item1.setEnabled(false);
                 Item2.setEnabled(false);
+                //Item3.setEnabled(false);
             }
-
-            //Item3.setEnabled(false);
-
 //            Map<String, Object> childUpdates = new HashMap<>();
 //            childUpdates.put("/games/" + games_id, result);
 //
@@ -155,4 +179,3 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 }
-
