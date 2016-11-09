@@ -44,7 +44,7 @@ public  class MainActivity extends AppCompatActivity {
     FirebaseUser user;
 
     SimpleDateFormat date;
-    Calendar cal_today = Calendar.getInstance();
+
     boolean is_over;
     boolean is_end;
     String end;
@@ -87,26 +87,14 @@ public  class MainActivity extends AppCompatActivity {
                 ref.child("games")) {
 
             public String games_id;
-//            @Override
-//            public void onBindViewHolder(PostViewHolder holder, int position, List<Object> payloads) {
-//                super.onBindViewHolder(holder, position, payloads);
-//                final int pos = position;
-//                holder.titleView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Log.e("ee", recycleAdapter.getRef(pos).getKey());
-//
-//                    }
-//                });
-//            }
 
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
                 date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
 
                 String owner =post.getOwner();
-                Log.e("SSUID",user.getUid());
-                Log.e("SSOWNER",owner);
+               // Log.e("SSUID",user.getUid());
+                //Log.e("SSOWNER",owner);
 
                 viewHolder.descView.setText(post.getDescription());
                 viewHolder.dateView.setText(date.format(post.getEnd_time()));
@@ -114,13 +102,13 @@ public  class MainActivity extends AppCompatActivity {
                 viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
                 viewHolder.titleView.setText(post.getTitle());
 
-                if(user.getUid().equals(owner)) {
+                if(user.getUid().equals(owner)) { //방을 만든 주인일때
                     viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.crown));
                     viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             games_id = recycleAdapter.getRef(position).getKey();
-                            Log.e("ee", recycleAdapter.getRef(position).getKey());
+                           // Log.e("ee", recycleAdapter.getRef(position).getKey());
 
                             ref.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
                                 @Override
@@ -153,7 +141,7 @@ public  class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                             games_id = recycleAdapter.getRef(position).getKey();
-                            Log.e("ee", recycleAdapter.getRef(position).getKey());
+                            //Log.e("ee", recycleAdapter.getRef(position).getKey());
 
                             ref.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
                                 @Override
@@ -161,15 +149,15 @@ public  class MainActivity extends AppCompatActivity {
                                     Map<String, String> map = (Map)dataSnapshot.getValue();
                                     is_obj = Integer.parseInt(String.valueOf(map.get("is_obj")));
 
+                                    /**시간 마감인지 아닌지 구분하기위해 메소드 호출**/
                                     long time = Long.parseLong(String.valueOf(map.get("end_time")));
-                                    end = date.format(time);
-                                    is_end = is_end_time(end);
+                                    is_end = is_end_time(time);
 
-                                    if(is_obj == 1 && is_end == true) {
+                                    if(is_obj == 1 && is_end == false) {
                                         Intent intent2 = new Intent(getApplicationContext(), DetailActivity.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
-                                    } else if(is_obj == 0 && is_end == true){
+                                    } else if(is_obj == 0 && is_end == false){
                                         Intent intent2 = new Intent(getApplicationContext(), DetailSubjectActivity.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
@@ -206,20 +194,14 @@ public  class MainActivity extends AppCompatActivity {
     }
 
     /**시간이 마감되었는지 아닌지 비교하는 메소드**/
-    public boolean is_end_time(String str_end) {
-        try {
+    public boolean is_end_time(long long_end) {
+            Calendar cal_today = Calendar.getInstance();
             long today_time = cal_today.getTimeInMillis();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
-            Date date_today = new Date(today_time); //오늘날짜 세팅
 
-            String str = str_end;
-            Date date_end = dateFormat.parse(str);
-
-            is_over = date_end.after(date_today); //시간이 over되지 않으면 true, over이면 false
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-
-        return is_over;
+            if(today_time - long_end > 0) { //마감
+                return true;
+            } else { //마감되지않음
+                return false;
+            }
     }
 }
