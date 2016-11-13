@@ -49,7 +49,9 @@ public class DetailResult extends AppCompatActivity {
                 Log.e("user answer : " ,"" + dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue());
                 if(map.get("right_answer") == dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue()) {
                             checkResult.setText("정답을 맞추셨습니다!");
-                        } else {
+                        } else if(dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue() == null){
+                            checkResult.setText("이 게임에 참여하지 않으셨습니다.");
+                        } else{
                             checkResult.setText("아깝게 틀리셨네요.");
                         }
             }
