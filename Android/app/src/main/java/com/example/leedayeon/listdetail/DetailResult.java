@@ -43,28 +43,15 @@ public class DetailResult extends AppCompatActivity {
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                final Map<String, String> map = (Map)dataSnapshot.getValue();
-                //final String ra = map.get("right_answer");
-                ref.child("games").child(games_id).child("participant").child(user.getUid()).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        Map<String, String> answer = (Map)dataSnapshot.getValue();
-                        //answer.get("answer");
+                Map<String, String> map = (Map)dataSnapshot.getValue();
 
-                        if(map.get("right_answer") == answer.get("answer")) {
+                Log.e("right answer : ", "" + map.get("right_answer").toString());
+                Log.e("user answer : " ,"" + dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue());
+                if(map.get("right_answer") == dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue()) {
                             checkResult.setText("정답을 맞추셨습니다!");
                         } else {
                             checkResult.setText("아깝게 틀리셨네요.");
                         }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-
             }
 
             @Override
