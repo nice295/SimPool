@@ -162,6 +162,9 @@ public  class MainActivity extends AppCompatActivity {
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
                                     } else {
+                                        Intent intent2 = new Intent(getApplicationContext(), DetailResult.class);
+                                        intent2.putExtra("games_id", games_id);
+                                        startActivity(intent2);
                                         Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
                                     }
 
