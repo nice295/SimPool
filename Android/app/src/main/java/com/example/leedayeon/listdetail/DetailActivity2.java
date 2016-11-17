@@ -73,13 +73,16 @@ public class DetailActivity2 extends AppCompatActivity {
         Intent intent2 = getIntent();
         games_id = intent2.getStringExtra("games_id");
 
-<<<<<<< HEAD
+
       //  SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
        // tvMsg.setText(dt.format(date));
-=======
         SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
         //tvMsg.setText(dt.format(date));
->>>>>>> 4904b316c9af707b5e61317324001bff2d0ff0a3
+
+
+        if(myRef.child("games").child(games_id).child("right_answer") != null) {
+            btEnter.setEnabled(false);
+        }
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
@@ -130,9 +133,9 @@ public class DetailActivity2 extends AppCompatActivity {
                             }
                         })
                         .show();
-            }
-        });
+                        btEnter.setEnabled(false);
 
+        }});
 
 
     }

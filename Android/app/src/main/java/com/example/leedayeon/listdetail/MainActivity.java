@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.example.leedayeon.listdetail.R.id.fab;
+import static com.example.leedayeon.listdetail.R.id.relativeLayout;
 import static com.example.leedayeon.listdetail.R.id.start;
 import static java.sql.Types.NULL;
 
@@ -50,6 +51,8 @@ public  class MainActivity extends AppCompatActivity {
     String end;
 
     private int is_obj=1;
+
+    boolean is_join;
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
         public TextView titleView;
@@ -93,8 +96,13 @@ public  class MainActivity extends AppCompatActivity {
                 date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
 
                 String owner =post.getOwner();
-               // Log.e("SSUID",user.getUid());
-                //Log.e("SSOWNER",owner);
+                long long_end_time = post.getEnd_time();
+
+                /** 내가 참여한 방일때 이미지를 참여중으로 바꿈 -> 동작안함
+                if(is_joining(user.getUid(), recycleAdapter.getRef(position).getKey()) == true) {
+                    viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.join));
+                }
+                **/
 
                 viewHolder.descView.setText(post.getDescription());
                 viewHolder.dateView.setText(date.format(post.getEnd_time()));
@@ -104,25 +112,43 @@ public  class MainActivity extends AppCompatActivity {
 
                 if(user.getUid().equals(owner)) { //방을 만든 주인일때
                     viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.crown));
+
+                    /** 마감된 방일때 이미지를 마감으로 바꿈 **/
+                    if(is_end_time(long_end_time) == true) {
+                        Log.e("is_end_time !!! ", Boolean.toString(is_end_time(post.getEnd_time())));
+                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
+                    }
+
+
+
                     viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             games_id = recycleAdapter.getRef(position).getKey();
-                           // Log.e("ee", recycleAdapter.getRef(position).getKey());
 
                             ref.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     Map<String, String> map = (Map)dataSnapshot.getValue();
                                     is_obj = Integer.parseInt(String.valueOf(map.get("is_obj")));
-                                    if(is_obj == 1) {
+
+                                    long time = Long.parseLong(String.valueOf(map.get("end_time")));
+                                    is_end = is_end_time(time);
+
+                                    if(is_obj == 1 && is_end == false) {
                                         Intent intent2 = new Intent(getApplicationContext(), DetailActivity2.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
-                                    } else if(is_obj == 0){
+                                    } else if(is_obj == 0 && is_end == false){
                                         Intent intent2 = new Intent(getApplicationContext(), DetailSubjectActivity2.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
+                                    } else if(is_end == true){
+                                        Intent intent2 = new Intent(getApplicationContext(), DetailResult.class);
+                                        intent2.putExtra("games_id", games_id);
+                                        startActivity(intent2);
+                                        Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
+//                                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
                                     }
 
                                 }
@@ -137,6 +163,14 @@ public  class MainActivity extends AppCompatActivity {
                 }
                 else { //방장이 아니라 참여자 신분
                     viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.ic_launcher));
+
+                    /** 마감된 방일때 이미지를 마감으로 바꿈 **/
+                    if(is_end_time(long_end_time) == true) {
+                        Log.e("is_end_time !!! ", Boolean.toString(is_end_time(post.getEnd_time())));
+                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
+                    }
+
+
                     viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -161,11 +195,12 @@ public  class MainActivity extends AppCompatActivity {
                                         Intent intent2 = new Intent(getApplicationContext(), DetailSubjectActivity.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
-                                    } else {
+                                    } else if(is_end == true){
                                         Intent intent2 = new Intent(getApplicationContext(), DetailResult.class);
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
                                         Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
+//                                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
                                     }
 
                                 }
@@ -194,6 +229,33 @@ public  class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    /**내가 참여했는지 아닌지 알아보는 메소드 -> 이미지뷰 변경**/
+    public boolean is_joining(final String myId, String gameId) {
+        ref.child("games").child(gameId).child("participant").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+//                Log.e("Count " ,""+dataSnapshot);
+//                Map<String, String> map = (Map)dataSnapshot.getValue();
+
+                for (DataSnapshot friendSnapshot: dataSnapshot.getChildren()) {
+//                    Log.e("uid :", title +"" + friendSnapshot.getKey());
+                    if(myId.equals(friendSnapshot.getKey())){
+                        is_join = true;
+                        break;
+                    } else {
+                        is_join = false;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        return is_join;
     }
 
     /**시간이 마감되었는지 아닌지 비교하는 메소드**/
