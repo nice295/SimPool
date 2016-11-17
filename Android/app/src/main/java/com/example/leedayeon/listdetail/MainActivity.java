@@ -144,11 +144,18 @@ public  class MainActivity extends AppCompatActivity {
                                         intent2.putExtra("games_id", games_id);
                                         startActivity(intent2);
                                     } else if(is_end == true){
-                                        Intent intent2 = new Intent(getApplicationContext(), DetailResult.class);
-                                        intent2.putExtra("games_id", games_id);
-                                        startActivity(intent2);
-                                        Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
-//                                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
+                                        if(is_obj ==1) {
+                                            Intent intent2 = new Intent(getApplicationContext(), DetailOwnerResult.class);
+                                            intent2.putExtra("games_id", games_id);
+                                            startActivity(intent2);
+                                            Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
+                                        } else if(is_obj==0){
+                                            Intent intent2 = new Intent(getApplicationContext(), DetailOwnerResult_sub.class);
+                                            intent2.putExtra("games_id", games_id);
+                                            startActivity(intent2);
+                                            Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
+                                        }
+                                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
                                     }
 
                                 }

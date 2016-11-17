@@ -45,6 +45,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
     private FirebaseAuth mAuth;
     FirebaseUser user;
     private String games_id;
+    private String answer_num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +79,13 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
 
                 // date = map.get("end_time");
                 // tvMsg.setText(date);
+
+                Map<String, String> sbj_map = (Map)dataSnapshot.child("num").getValue();
+                try {
+                    answer_num = sbj_map.get("subj");
+                }catch (NullPointerException e){
+                    answer_num = String.valueOf(0);
+                }
 
             }
 
@@ -123,6 +131,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
         if (view == mBtJoin) {
 
                 myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(answer.getText().toString());
+                myRef.child("games").child(games_id).child("num").child("answer").setValue(String.valueOf(Integer.parseInt(answer_num) + 1));
                 mBtJoin.setText(getString(R.string.joining));
                 mBtJoin.setEnabled(false);
 

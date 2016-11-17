@@ -15,7 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Map;
 
-public class DetailOwnerResult extends AppCompatActivity {
+public class DetailOwnerResult_sub extends AppCompatActivity {
 
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
 
@@ -23,19 +23,16 @@ public class DetailOwnerResult extends AppCompatActivity {
     private String games_id;
     FirebaseUser user;
 
-    TextView rightAnswer;
-    TextView obj_1;
-    TextView obj_2;
-
+     TextView rightanswer;
+     TextView cntAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_owner_result);
+        setContentView(R.layout.activity_detail_owner_result_sub);
 
-        rightAnswer = (TextView)findViewById(R.id.msg);
-        obj_1 = (TextView)findViewById(R.id.obj_2);
-        obj_2 = (TextView)findViewById(R.id.obj_2);
+        rightanswer = (TextView)findViewById(R.id.rightanswer);
+        cntAnswer = (TextView)findViewById(R.id.cntAnswer);
 
         Intent intent2 = getIntent();
         games_id = intent2.getStringExtra("games_id");
@@ -47,9 +44,8 @@ public class DetailOwnerResult extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Map<String, String> map = (Map)dataSnapshot.getValue();
 
-                rightAnswer.setText("내가 입력한 정답 : "+map.get("right_answer"));
-                obj_1.setText("1번을 고른 사람 : "+dataSnapshot.child("num").child("obj_1").getValue()+"명");
-                obj_2.setText("2번을 고른 사람 : "+dataSnapshot.child("num").child("obj_2").getValue()+"명");
+                rightanswer.setText("내가 입력한 정답 : "+map.get("right_answer"));
+                cntAnswer.setText("정답을 고른 사람 : "+dataSnapshot.child("num").child("answer").getValue()+"명");
             }
 
             @Override
@@ -57,5 +53,6 @@ public class DetailOwnerResult extends AppCompatActivity {
 
             }
         });
+
     }
 }
