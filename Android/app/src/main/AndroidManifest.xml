@@ -62,6 +62,8 @@
         <activity android:name=".DetailSubjectActivity"></activity>
         <activity android:name=".DetailSubjectActivity2" />
         <activity android:name=".DetailResult"/>
+        <activity android:name=".DetailOwnerResult" />
+        <activity android:name=".DetailOwnerResult_sub"/>
     </application>
 
 </manifest>
