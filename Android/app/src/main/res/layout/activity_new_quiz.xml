@@ -27,11 +27,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etAddTitle"
-            android:text="방 제목 입력"
             android:layout_above="@+id/textView4"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginBottom="52dp" />
+            android:layout_marginBottom="52dp"
+            android:hint="방 제목 입력" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,11 +47,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etAddContent"
-            android:text="내기 설명 입력"
             android:layout_alignParentStart="true"
             android:layout_alignEnd="@+id/etAddTitle"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="52dp" />
+            android:layout_marginBottom="52dp"
+            android:hint="내기 설명 입력" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -88,12 +89,4 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
-
-    <!--<DatePicker-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/datePicker"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:datePickerMode="spinner"-->
-        <!--android:calendarViewShown="false"/>-->
 </RelativeLayout>

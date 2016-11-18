@@ -36,8 +36,6 @@ dependencies {
     compile 'com.google.firebase:firebase-database:9.4.0'
     compile 'com.google.firebase:firebase-auth:9.4.0'
     compile 'com.firebaseui:firebase-ui-database:0.4.0'
-    //khlee: remove this picker use internal picker
-    // compile project(':slideDateTimePicker')
     //khlee: updated Facebook SDK
     // compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.facebook.android:facebook-android-sdk:4.9.0'

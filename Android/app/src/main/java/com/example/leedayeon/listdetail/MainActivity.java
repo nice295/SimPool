@@ -22,17 +22,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 import java.util.Map;
-
-import static com.example.leedayeon.listdetail.R.id.fab;
-import static com.example.leedayeon.listdetail.R.id.relativeLayout;
-import static com.example.leedayeon.listdetail.R.id.start;
-import static java.sql.Types.NULL;
 
 public  class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -46,12 +38,8 @@ public  class MainActivity extends AppCompatActivity {
 
     SimpleDateFormat date;
 
-    boolean is_over;
     boolean is_end;
-    String end;
-
     private int is_obj=1;
-
     boolean is_join;
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
