@@ -23,10 +23,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Map;
 
+import io.paperdb.Paper;
+
 public  class MainActivity extends AppCompatActivity {
+    public static final String TAG = "MainActivity";
+
     private RecyclerView recyclerView;
     private LinearLayoutManager layoutManager;
 
@@ -43,6 +48,7 @@ public  class MainActivity extends AppCompatActivity {
     boolean is_join;
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
+        View mView;
         public TextView titleView;
         public TextView descView;
         public TextView dateView;
@@ -56,6 +62,8 @@ public  class MainActivity extends AppCompatActivity {
             dateView = (TextView) itemView.findViewById(R.id.textViewDate);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
             imageSitu = (ImageView) itemView.findViewById(R.id.imageViewSitu);
+
+            mView = v;
         }
     }
 
@@ -71,6 +79,7 @@ public  class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
 
         ref = FirebaseDatabase.getInstance().getReference();
+
         recycleAdapter = new FirebaseRecyclerAdapter<NewQuiz, PostViewHolder>(
                 NewQuiz.class,
                 R.layout.item_message,
@@ -81,6 +90,7 @@ public  class MainActivity extends AppCompatActivity {
 
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
+
                 date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
 
                 String owner =post.getOwner();
@@ -97,6 +107,13 @@ public  class MainActivity extends AppCompatActivity {
 
                 viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
                 viewHolder.titleView.setText(post.getTitle());
+
+                viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Log.w(TAG, "You clicked on "+position);
+                    }
+                });
 
                 if(user.getUid().equals(owner)) { //방을 만든 주인일때
                     viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.crown));

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_detail_result"
     android:layout_width="match_parent"
@@ -11,20 +12,35 @@
     tools:context="com.example.leedayeon.listdetail.DetailResult">
 
     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="87dp"
-        android:id="@+id/checkResult" />
-
-    <TextView
-        android:text="TextView"
+        android:text="Answer is"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignEnd="@+id/checkResult"
         android:layout_marginTop="42dp"
-        android:id="@+id/rightResult" />
+        android:id="@+id/rightResult"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="You are correct."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp"
+        android:id="@+id/checkResult"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/win"
+        android:id="@+id/ivWin"
+        android:layout_below="@+id/checkResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="178dp"
+        android:layout_width="200dp"
+        android:visibility="gone" />
+
 </RelativeLayout>

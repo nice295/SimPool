@@ -32,6 +32,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".IntroActivity"
+            android:label="Intro with background"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullTheme" />
+
+        <activity
             android:name=".DetailActivity"
             android:label="@string/detail"
             android:parentActivityName=".MainActivity"
@@ -61,9 +67,9 @@
         <activity android:name=".DetailActivity2" />
         <activity android:name=".DetailSubjectActivity"></activity>
         <activity android:name=".DetailSubjectActivity2" />
-        <activity android:name=".DetailResult"/>
+        <activity android:name=".DetailResult" />
         <activity android:name=".DetailOwnerResult" />
-        <activity android:name=".DetailOwnerResult_sub"/>
+        <activity android:name=".DetailOwnerResult_sub" />
     </application>
 
 </manifest>

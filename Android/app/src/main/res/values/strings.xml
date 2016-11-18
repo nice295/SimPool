@@ -3,5 +3,10 @@
     <string name="detail">Detail</string>
     <string name="new_game">New game</string>
     <string name="joining">Joining</string>
-
+    <string name="intro1_title">심심풀이 해결</string>
+    <string name="intro1_desc">세상의 모든 사람들과 사소한 내기 게임을 할 수 있습니다.</string>
+    <string name="intro2_title">쓸데없는 승부욕</string>
+    <string name="intro2_desc">표출하고 싶었던 승부욕을 발휘해 보세요.</string>
+    <string name="skip">Skip</string>
+    <string name="done">Done</string>
 </resources>
