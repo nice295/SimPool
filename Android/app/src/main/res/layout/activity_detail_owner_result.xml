@@ -41,7 +41,7 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rightanswer"
+        android:id="@+id/rightAnswer"
         android:layout_below="@+id/msg"
         android:layout_alignParentStart="true"
         android:layout_marginTop="17dp" />

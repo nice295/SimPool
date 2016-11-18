@@ -33,8 +33,8 @@ public class DetailOwnerResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_owner_result);
 
-        rightAnswer = (TextView)findViewById(R.id.msg);
-        obj_1 = (TextView)findViewById(R.id.obj_2);
+        rightAnswer = (TextView)findViewById(R.id.rightAnswer);
+        obj_1 = (TextView)findViewById(R.id.obj_1);
         obj_2 = (TextView)findViewById(R.id.obj_2);
 
         Intent intent2 = getIntent();
