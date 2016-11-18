@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,11 +44,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     private String obj_2;
     private String obj1_num;
     private String obj2_num;
+    private String answer;
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth mAuth;
     FirebaseUser user;
     private String games_id;
-
+    private ArrayList<String> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +67,33 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
 
-
         Intent intent2 = getIntent();
         games_id = intent2.getStringExtra("games_id");
+
+        list= new ArrayList<String>();
+
+//        tvTitle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                myRef.child("games").child(games_id).child("participant").addValueEventListener(new ValueEventListener() {
+//
+//                    @Override
+//                    public void onDataChange(DataSnapshot dataSnapshot) {
+//                        for (DataSnapshot friendSnapshot: dataSnapshot.getChildren()) {
+//                            Log.e("XXY :", title +"" + friendSnapshot.getKey()+":"+friendSnapshot.child("answer").getValue());
+//                            if(answer.equals(friendSnapshot.child("answer").getValue())){
+//                                list.add(friendSnapshot.getKey());
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError) {
+//
+//                    }
+//                });
+//            }
+//        });
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
@@ -84,9 +110,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 // date = map.get("end_time");
                 // tvMsg.setText(date);
 
+//                answer=map.get("right_answer");
+
                 obj_1 = map.get("obj_1");
                 Item1.setText(obj_1);
-
 
                 obj_2 = map.get("obj_2");
                 Item2.setText(obj_2);
@@ -102,9 +129,6 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 }catch (NullPointerException e){
                     obj2_num = String.valueOf(0);
                 }
-
-
-
 
             }
 
