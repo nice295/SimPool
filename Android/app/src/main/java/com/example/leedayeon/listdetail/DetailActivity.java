@@ -191,6 +191,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 Item1.setEnabled(false);
                 Item2.setEnabled(false);
                 //Item3.setEnabled(false);
+
+                Toast.makeText(this, "참여 성공하였습니다.", Toast.LENGTH_SHORT).show();
             }
 //            Map<String, Object> childUpdates = new HashMap<>();
 //            childUpdates.put("/games/" + games_id, result);

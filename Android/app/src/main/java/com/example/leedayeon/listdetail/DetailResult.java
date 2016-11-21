@@ -53,14 +53,17 @@ public class DetailResult extends AppCompatActivity {
                 Log.e("right answer : ", "" + map.get("right_answer").toString());
                 Log.e("user answer : ", "" + dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue());
                 rightResult.setText("정답은 " + map.get("right_answer") + "입니다.");
-                if (map.get("right_answer").equals(dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue())) {
+                //Log.e("right answer : ", "" + map.get("right_answer").toString());
+                //Log.e("user answer : " ,"" + dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue());
+
+                if(map.get("right_answer") == null) {
+                    checkResult.setText("방장이 시간내에 정답을 입력하지 않았습니다.");
+                } else if(map.get("right_answer").toString().equals(dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue())) {
                     checkResult.setText("정답을 맞추셨습니다!");
-                    mIvWin.setVisibility(View.VISIBLE);
-                } else if (dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue() == null) {
+                } else if(dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue() == null){
                     checkResult.setText("이 게임에 참여하지 않으셨습니다.");
                 } else {
                     checkResult.setText("아깝게 틀리셨네요.");
-                    mIvWin.setVisibility(View.GONE);
                 }
             }
 
