@@ -62,7 +62,7 @@ public class DetailOwnerResult extends AppCompatActivity {
                 if(dataSnapshot.child("num").child("obj_2").getValue() != null){
                     obj_2.setText("2번을 고른 사람 : "+dataSnapshot.child("num").child("obj_2").getValue()+"명");
                 } else {
-                    obj_1.setText("2번을 고른 사람 : 0명");
+                    obj_2.setText("2번을 고른 사람 : 0명");
                 }
 
             }

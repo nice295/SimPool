@@ -30,6 +30,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.leedayeon.listdetail.R.color.room_timeover;
+
 public class DetailActivity2 extends AppCompatActivity {
 
 
@@ -103,6 +105,8 @@ public class DetailActivity2 extends AppCompatActivity {
 
                 if(map.get("right_answer") != null){
                     btEnter.setEnabled(false);
+                    btEnter.getResources().getColor(room_timeover);
+                    btEnter.setText("입력 완료");
                 }
 
             }
