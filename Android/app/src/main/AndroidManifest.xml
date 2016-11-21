@@ -63,7 +63,7 @@
             android:label="@string/new_game">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".NewQuizActivity" />
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".DetailActivity2">

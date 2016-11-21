@@ -1,6 +1,7 @@
 package com.example.leedayeon.listdetail;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -67,6 +68,32 @@ public  class MainActivity extends AppCompatActivity {
         }
     }
 
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//
+//        recycleAdapter = new FirebaseRecyclerAdapter<NewQuiz, PostViewHolder>(
+//                NewQuiz.class,
+//                R.layout.item_message,
+//                PostViewHolder.class,
+//                ref.child("games")) {
+//            @Override
+//            protected void populateViewHolder(PostViewHolder viewHolder, NewQuiz post, int position) {
+//                String owner =post.getOwner();
+//                long long_end_time = post.getEnd_time();
+//                is_end = is_end_time(long_end_time);
+//
+//                if(is_end_time(long_end_time) == true) {
+//                    viewHolder.dateView.setText("마감됨");
+//                    Log.e("is_end_time !!! ",post.getTitle() + "  " + Boolean.toString(is_end_time(post.getEnd_time())));
+//                    viewHolder.mView.setBackgroundColor(getResources().getColor(R.color.room_timeover));
+//                } else {
+//                    viewHolder.dateView.setText(formatTimeString(post.getEnd_time()));
+//                }
+//            }
+//        };
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +106,9 @@ public  class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
 
         layoutManager.setReverseLayout(true);
+        layoutManager.setStackFromEnd(true);
         ref = FirebaseDatabase.getInstance().getReference();
+
 
         recycleAdapter = new FirebaseRecyclerAdapter<NewQuiz, PostViewHolder>(
                 NewQuiz.class,
@@ -88,6 +117,7 @@ public  class MainActivity extends AppCompatActivity {
                 ref.child("games")) {
 
             public String games_id;
+
 
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
@@ -98,26 +128,27 @@ public  class MainActivity extends AppCompatActivity {
                 long long_end_time = post.getEnd_time();
                 is_end = is_end_time(long_end_time);
 
-                if(is_end==true)
-                    viewHolder.mView.setBackgroundColor(getResources().getColor(R.color.room_timeover));
-                /** 내가 참여한 방일때 이미지를 참여중으로 바꿈 -> 동작안함
+                /** 내가 참여한 방일때 이미지를 참여중으로 바꿈 -> 동작안함**/
                 if(is_joining(user.getUid(), recycleAdapter.getRef(position).getKey()) == true) {
                     viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.join));
                 }
-                **/
+
 
                 viewHolder.descView.setText(post.getDescription());
-                viewHolder.dateView.setText(date.format(post.getEnd_time()));
-
                 viewHolder.titleView.setText(post.getTitle());
+
+                /** 마감된 방일때 이미지를 마감으로 바꿈 **/
+                if(is_end_time(long_end_time) == true) {
+                    viewHolder.dateView.setText("마감됨");
+                    viewHolder.mView.setBackgroundColor(getResources().getColor(R.color.room_timeover));
+                } else {
+                    viewHolder.dateView.setText(formatTimeString(post.getEnd_time()));
+                    viewHolder.mView.setBackgroundColor(Color.WHITE);
+                }
+
 
                 if(user.getUid().equals(owner)) { //방을 만든 주인일때
                     viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.owner1));
-
-                    /** 마감된 방일때 이미지를 마감으로 바꿈 **/
-                    if(is_end_time(long_end_time) == true) {
-                        Log.e("is_end_time !!! ", Boolean.toString(is_end_time(post.getEnd_time())));
-                    }
 
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -153,7 +184,7 @@ public  class MainActivity extends AppCompatActivity {
                                             startActivity(intent2);
                                             Toast.makeText(MainActivity.this, "시간이 마감되었습니다", Toast.LENGTH_SHORT).show();
                                         }
-                                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
+                                        //viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
                                     }
 
                                 }
@@ -167,13 +198,6 @@ public  class MainActivity extends AppCompatActivity {
                     });
                 }
                 else { //방장이 아니라 참여자 신분
-
-                    /** 마감된 방일때 이미지를 마감으로 바꿈 **/
-                    if(is_end_time(long_end_time) == true) {
-                        Log.e("is_end_time !!! ", Boolean.toString(is_end_time(post.getEnd_time())));
-                    }
-
-
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -281,7 +305,6 @@ public  class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
@@ -290,15 +313,54 @@ public  class MainActivity extends AppCompatActivity {
         return is_join;
     }
 
+    private static class TIME_MAXIMUM{
+        public static final int SEC = 60;
+        public static final int MIN = 60;
+        public static final int HOUR = 24;
+        public static final int DAY = 30;
+        public static final int MONTH = 12;
+    }
+
+    public static String formatTimeString(long tempDate) {
+        Calendar cal_today = Calendar.getInstance();
+        long curTime = cal_today.getTimeInMillis();
+        long diffTime = (tempDate-curTime) / 1000;
+
+        String msg = null;
+        Log.e("MAinActivity : ", Long.toString(diffTime));
+        if (diffTime < TIME_MAXIMUM.SEC) {
+            // sec
+            msg = "곧 마감";
+        } else if ((diffTime /= TIME_MAXIMUM.SEC) < TIME_MAXIMUM.MIN) {
+            // min
+            msg = diffTime + "분 후 마감";
+        } else if ((diffTime /= TIME_MAXIMUM.MIN) < TIME_MAXIMUM.HOUR) {
+            // hour
+            msg = (diffTime) + "시간 후 마감";
+        } else if ((diffTime /= TIME_MAXIMUM.HOUR) < TIME_MAXIMUM.DAY) {
+            // day
+            msg = (diffTime) + "일 후 마감";
+        } else if ((diffTime /= TIME_MAXIMUM.DAY) < TIME_MAXIMUM.MONTH) {
+            // day
+            msg = (diffTime) + "달 후 마감";
+        } else {
+            msg = "1년 이상 남음";
+        }
+
+        return msg;
+    }
+
     /**시간이 마감되었는지 아닌지 비교하는 메소드**/
     public boolean is_end_time(long long_end) {
             Calendar cal_today = Calendar.getInstance();
             long today_time = cal_today.getTimeInMillis();
 
             if(today_time - long_end > 0) { //마감
+
                 return true;
             } else { //마감되지않음
                 return false;
             }
     }
+
 }
