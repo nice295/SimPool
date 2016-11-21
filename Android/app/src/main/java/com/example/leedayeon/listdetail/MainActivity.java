@@ -54,7 +54,6 @@ public  class MainActivity extends AppCompatActivity {
         public TextView titleView;
         public TextView descView;
         public TextView dateView;
-        public ImageView imageView;
         public ImageView imageSitu;
 
         public PostViewHolder(View v) {
@@ -62,7 +61,6 @@ public  class MainActivity extends AppCompatActivity {
             titleView = (TextView) itemView.findViewById(R.id.textViewTitle);
             descView = (TextView) itemView.findViewById(R.id.textViewDesc);
             dateView = (TextView) itemView.findViewById(R.id.textViewDate);
-            imageView = (ImageView) itemView.findViewById(R.id.imageView);
             imageSitu = (ImageView) itemView.findViewById(R.id.imageViewSitu);
 
             mView = v;
@@ -98,7 +96,10 @@ public  class MainActivity extends AppCompatActivity {
 
                 String owner =post.getOwner();
                 long long_end_time = post.getEnd_time();
+                is_end = is_end_time(long_end_time);
 
+                if(is_end==true)
+                    viewHolder.mView.setBackgroundColor(getResources().getColor(R.color.room_timeover));
                 /** 내가 참여한 방일때 이미지를 참여중으로 바꿈 -> 동작안함
                 if(is_joining(user.getUid(), recycleAdapter.getRef(position).getKey()) == true) {
                     viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.join));
@@ -108,28 +109,17 @@ public  class MainActivity extends AppCompatActivity {
                 viewHolder.descView.setText(post.getDescription());
                 viewHolder.dateView.setText(date.format(post.getEnd_time()));
 
-                viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.sign));
                 viewHolder.titleView.setText(post.getTitle());
 
-                viewHolder.mView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Log.w(TAG, "You clicked on "+position);
-                    }
-                });
-
                 if(user.getUid().equals(owner)) { //방을 만든 주인일때
-                    viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.crown));
+                    viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.owner1));
 
                     /** 마감된 방일때 이미지를 마감으로 바꿈 **/
                     if(is_end_time(long_end_time) == true) {
                         Log.e("is_end_time !!! ", Boolean.toString(is_end_time(post.getEnd_time())));
-                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
                     }
 
-
-
-                    viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
+                    viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             games_id = recycleAdapter.getRef(position).getKey();
@@ -177,16 +167,14 @@ public  class MainActivity extends AppCompatActivity {
                     });
                 }
                 else { //방장이 아니라 참여자 신분
-                    viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.ic_launcher));
 
                     /** 마감된 방일때 이미지를 마감으로 바꿈 **/
                     if(is_end_time(long_end_time) == true) {
                         Log.e("is_end_time !!! ", Boolean.toString(is_end_time(post.getEnd_time())));
-                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.over));
                     }
 
 
-                    viewHolder.titleView.setOnClickListener(new View.OnClickListener() {
+                    viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             games_id = recycleAdapter.getRef(position).getKey();
