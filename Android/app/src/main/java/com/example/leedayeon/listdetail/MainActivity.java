@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -78,6 +80,7 @@ public  class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.messageRecyclerView);
         layoutManager = new LinearLayoutManager(this);
 
+        layoutManager.setReverseLayout(true);
         ref = FirebaseDatabase.getInstance().getReference();
 
         recycleAdapter = new FirebaseRecyclerAdapter<NewQuiz, PostViewHolder>(
@@ -241,6 +244,35 @@ public  class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return  true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //ActionBar 메뉴 클릭에 대한 이벤트 처리
+
+        Toast.makeText(this, "로그아웃", Toast.LENGTH_SHORT).show();
+        mAuth.getInstance().signOut();
+        int id = item.getItemId();
+        switch (id){
+            case R.id.logout_button:
+                mAuth.getInstance().signOut();
+                Intent sign_intent = new Intent(getApplicationContext(), SignActivity.class);
+                startActivity(sign_intent);
+                break;
+            case R.id.introduce:
+                Intent introduce_intent = new Intent(getApplicationContext(), IntroduceActivity.class);
+                startActivity(introduce_intent);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     /**내가 참여했는지 아닌지 알아보는 메소드 -> 이미지뷰 변경**/
