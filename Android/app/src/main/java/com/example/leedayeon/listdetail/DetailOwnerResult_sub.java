@@ -44,8 +44,17 @@ public class DetailOwnerResult_sub extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Map<String, String> map = (Map)dataSnapshot.getValue();
 
-                rightanswer.setText("내가 입력한 정답 : "+map.get("right_answer"));
-                cntAnswer.setText("정답을 고른 사람 : "+dataSnapshot.child("num").child("answer").getValue()+"명");
+                if(map.get("right_answer")!=null){
+                    rightanswer.setText("내가 입력한 정답 : "+map.get("right_answer"));
+                } else if(map.get("right_answer")==null) {
+                    rightanswer.setText("정답을 입력하지 않았습니다.");
+                }
+                if(dataSnapshot.child("num").child("answer").getValue() != null){
+                    cntAnswer.setText("정답을 고른 사람 : "+dataSnapshot.child("num").child("answer").getValue()+"명");
+                } else {
+                    cntAnswer.setText("정답을 고른 사람 : 0명");
+                }
+
             }
 
             @Override
