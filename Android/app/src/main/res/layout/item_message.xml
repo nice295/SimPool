@@ -13,15 +13,39 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/layout">
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_below="@+id/layout"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp">
 
-            <ImageView
+            <TextView
+                android:id="@+id/textViewDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:layout_margin="5dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/circle_border"/>
+                android:layout_marginTop="5dp"
+                tools:text="des"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/textViewDate"
+                android:layout_gravity="right"
+                android:textSize="14sp"
+                android:layout_below="@+id/textViewDesc"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
             <TextView
                 android:id="@+id/textViewTitle"
@@ -34,44 +58,17 @@
                 android:layout_margin="5dp"
                 android:layout_marginLeft="0dp"
                 style="@style/TextAppearance.AppCompat.Medium"
-                tools:text="TEXT" />
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@+id/layout"
-            android:layout_alignLeft="@+id/layout"
-            android:layout_alignStart="@+id/layout"
-            android:padding="5dp">
-
-            <TextView
-                android:id="@+id/textViewDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                tools:text="des" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Small Text"
-                android:id="@+id/textViewDate"
-                android:layout_below="@+id/textViewDesc"
-                android:layout_alignRight="@+id/imageViewSitu"
-                android:layout_gravity="right"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true" />
+                tools:text="TEXT"
+                android:textSize="20sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageViewSitu"
-                android:layout_marginTop="3dp"
-                android:layout_below="@+id/textViewDesc"
-                android:layout_alignParentStart="true" />
+                android:layout_marginRight="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp" />
 
         </RelativeLayout>
 

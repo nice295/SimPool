@@ -1,15 +1,21 @@
 package com.example.leedayeon.listdetail;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -26,8 +32,9 @@ import java.util.Date;
 
 import io.paperdb.Paper;
 
-public class NewQuizActivity extends AppCompatActivity {
+public class NewQuizActivity extends AppCompatActivity implements View.OnTouchListener {
 
+    private static final String TAG = "NewQuizActivity";
     // date and time
     private int mYear;
     private int mMonth;
@@ -46,16 +53,19 @@ public class NewQuizActivity extends AppCompatActivity {
 
     private EditText etAddTitle;
     private EditText etAddContent;
+    private LinearLayout mLlBg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_quiz);
 
-        setTitle("내기 추가하기");
+        setTitle(getString(R.string.addQuiz));
 
         Paper.init(this);
 
+        mLlBg = (LinearLayout) findViewById(R.id.llBg);
+        mLlBg.setOnTouchListener(this);
         btDate = (Button) findViewById(R.id.pickDate);
         btTime = (Button) findViewById(R.id.pickTime12);
         btNext = (Button) findViewById(R.id.btNext);
@@ -176,6 +186,16 @@ public class NewQuizActivity extends AppCompatActivity {
             return String.valueOf(c);
         else
             return "0" + String.valueOf(c);
+    }
+
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        if (view == mLlBg) {
+            Log.d(TAG, "Touched on BG");
+            InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+        }
+        return false;
     }
 
 

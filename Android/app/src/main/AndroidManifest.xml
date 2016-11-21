@@ -54,22 +54,48 @@
         <activity
             android:name=".NewQuizActivity"
             android:label="@string/new_game">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".NewQuizActivity2" />
+        <activity
+            android:name=".NewQuizActivity2"
+            android:label="@string/new_game">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".DetailActivity2" />
-        <activity android:name=".DetailSubjectActivity"></activity>
-        <activity android:name=".DetailSubjectActivity2" />
-        <activity android:name=".DetailResult" />
-        <activity android:name=".DetailOwnerResult" />
-        <activity android:name=".DetailOwnerResult_sub" />
+        <activity android:name=".DetailActivity2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DetailSubjectActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DetailSubjectActivity2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DetailResult" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DetailOwnerResult" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".DetailOwnerResult_sub" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
