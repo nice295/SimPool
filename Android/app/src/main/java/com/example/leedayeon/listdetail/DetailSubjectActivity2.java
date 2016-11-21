@@ -80,6 +80,10 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
                 //dt = map.get("end_time");
                 quiz = map.get("subj");
                 tvQuiz.setText(quiz);
+
+                if(map.get("right_answer")!=null){
+                    btEnter.setEnabled(false);
+                }
             }
 
             @Override
@@ -103,7 +107,7 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
                             public void onClick(DialogInterface dialog, int which) {
                                 String value = answer.getText().toString();
                                 myRef.child("games").child(games_id).child("right_answer").setValue(value);
-                                Toast.makeText(getApplicationContext(), value + "선택", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "정답이 입력되었습니다.", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setNegativeButton("취소", null)

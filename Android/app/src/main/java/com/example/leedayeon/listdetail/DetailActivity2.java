@@ -80,9 +80,6 @@ public class DetailActivity2 extends AppCompatActivity {
         //tvMsg.setText(dt.format(date));
 
 
-        if(myRef.child("games").child(games_id).child("right_answer") != null) {
-            btEnter.setEnabled(false);
-        }
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
@@ -104,6 +101,10 @@ public class DetailActivity2 extends AppCompatActivity {
                 obj_2 = map.get("obj_2");
                 Item2.setText(obj_2);
 
+                if(map.get("right_answer") != null){
+                    btEnter.setEnabled(false);
+                }
+
             }
 
             @Override
@@ -123,7 +124,7 @@ public class DetailActivity2 extends AppCompatActivity {
                         .setPositiveButton("입력", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 myRef.child("games").child(games_id).child("right_answer").setValue(str[temp]);
-                                Toast.makeText(getApplicationContext(), str[temp] + "선택", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "정답이 입력되었습니다.", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setNegativeButton("취소", null)
@@ -133,7 +134,7 @@ public class DetailActivity2 extends AppCompatActivity {
                             }
                         })
                         .show();
-                        btEnter.setEnabled(false);
+                        //btEnter.setEnabled(false);
 
         }});
 

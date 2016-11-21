@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.leedayeon.listdetail.DetailActivity2"
     android:weightSum="1"
-    android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="347dp"
+    android:gravity="bottom">
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="enter answer"
+        android:id="@+id/btEnter"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout">
+        android:onClick="onClick (DetailActivity2)"
+        android:textColor="#FFFFFF"
+        android:background="#2196F3" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/relativeLayout"
+        android:layout_weight="0.65"
+        android:layout_above="@+id/btEnter"
+        android:layout_alignParentStart="true">
 
         <!-- TODO: Update blank fragment layout -->
 
@@ -26,7 +39,9 @@
             android:textAppearance="@android:style/TextAppearance.Material.Large"
             android:id="@+id/tvTitle"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/tvDescription" />
+            android:layout_alignStart="@+id/tvDescription"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,16 +52,10 @@
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:layout_below="@+id/tvTitle"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/imageView" />
-
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:id="@+id/imageView"
-            android:layout_gravity="left|top"
-            android:src="@mipmap/ic_launcher"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,43 +64,34 @@
             android:text="It&apos;s over!"
             android:id="@+id/tvMsg"
             android:layout_below="@+id/tvDescription"
-            android:layout_alignStart="@+id/tvDescription" />
+            android:layout_alignStart="@+id/tvDescription"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Item1"
+            android:id="@+id/Item1"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/tvMsg"
+            android:layout_alignStart="@+id/tvMsg"
+            android:layout_marginTop="35dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Item1"
-        android:id="@+id/Item1"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Item2"
+            android:id="@+id/Item2"
+            android:layout_gravity="center_horizontal"
+            tools:text="Item2"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/Item1"
+            android:layout_alignStart="@+id/Item1" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Item2"
-        android:id="@+id/Item2"
-        android:layout_below="@+id/Item1"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        tools:text="Item2" />
-
-    <Button
-        android:layout_width="329dp"
-        android:text="enter answer"
-        android:id="@+id/btEnter"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="74dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
-        android:layout_height="wrap_content"
-        android:onClick="onClick (DetailActivity2)" />
+    </LinearLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

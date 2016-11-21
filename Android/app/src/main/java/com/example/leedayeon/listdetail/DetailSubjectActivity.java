@@ -134,8 +134,9 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
                 myRef.child("games").child(games_id).child("num").child("answer").setValue(String.valueOf(Integer.parseInt(answer_num) + 1));
                 mBtJoin.setText(getString(R.string.joining));
                 mBtJoin.setEnabled(false);
+            Toast.makeText(this, "참여 성공하였습니다.", Toast.LENGTH_SHORT).show();
 
-            //Item3.setEnabled(false);
+            mBtJoin.setEnabled(false);
 
 //            Map<String, Object> childUpdates = new HashMap<>();
 //            childUpdates.put("/games/" + games_id, result);
