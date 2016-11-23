@@ -33,14 +33,29 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textAlignment="center" />
 
-    <ImageView
-        android:layout_height="200dp"
-        app:srcCompat="@drawable/win"
-        android:id="@+id/ivWin"
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/obj_1"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:background="@color/colorAccent"
         android:layout_below="@+id/checkResult"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="178dp"
-        android:layout_width="200dp"
-        android:visibility="gone" />
+        android:layout_toStartOf="@+id/rightResult"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/obj_2"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/obj_1"
+        android:layout_alignStart="@+id/obj_1"
+        android:layout_marginTop="44dp"
+        android:gravity="center_vertical" />
 
 </RelativeLayout>
