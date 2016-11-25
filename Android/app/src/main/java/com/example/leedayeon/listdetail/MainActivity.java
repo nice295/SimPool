@@ -2,6 +2,7 @@ package com.example.leedayeon.listdetail;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -55,6 +57,7 @@ public  class MainActivity extends AppCompatActivity {
         public TextView titleView;
         public TextView descView;
         public TextView dateView;
+        public ImageView imageView;
         public ImageView imageSitu;
 
         public PostViewHolder(View v) {
@@ -62,6 +65,7 @@ public  class MainActivity extends AppCompatActivity {
             titleView = (TextView) itemView.findViewById(R.id.textViewTitle);
             descView = (TextView) itemView.findViewById(R.id.textViewDesc);
             dateView = (TextView) itemView.findViewById(R.id.textViewDate);
+            imageView = (ImageView)itemView.findViewById(R.id.imageView);
             imageSitu = (ImageView) itemView.findViewById(R.id.imageViewSitu);
 
             mView = v;
@@ -110,6 +114,14 @@ public  class MainActivity extends AppCompatActivity {
 
                 viewHolder.descView.setText(post.getDescription());
                 viewHolder.titleView.setText(post.getTitle());
+
+                /**프로필 설정**/
+                if(post.getProfile() == null){
+                    viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.mipmap.ic_launcher));
+                }
+                else{
+                    Glide.with(MainActivity.this).load(post.getProfile()).into(viewHolder.imageView);
+                }
 
                 /** 마감된 방일때 이미지를 마감으로 바꿈 **/
                 if(is_end_time(long_end_time) == true) {

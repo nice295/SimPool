@@ -47,6 +47,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRef = database.getReference();
+    private  FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,14 +73,15 @@ public class NewQuizActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 NewQuiz nq = new NewQuiz();
                 String owner = getUserId();
+                String profile = user.getPhotoUrl().toString();
 
                 if(is_obj == 1 && owner != null) {
                     obj_1 = ObjectFragment.obj1.getText().toString();
                     obj_2 = ObjectFragment.obj2.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2, owner, right_answer);
+                    nq = new NewQuiz(profile, title, description, end_time, is_obj, obj_1, obj_2, owner, right_answer);
                 } else if(is_obj == 0 && owner != null){
                     subj = SubjectFragment.subj.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, subj, owner, right_answer);
+                    nq = new NewQuiz(profile, title, description, end_time, is_obj, subj, owner, right_answer);
                 } else {
                     Toast.makeText(NewQuizActivity2.this, "입력값을 제대로 입력하세요", Toast.LENGTH_SHORT).show();
                 }

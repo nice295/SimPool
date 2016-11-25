@@ -10,68 +10,70 @@
         android:layout_height="wrap_content"
         android:paddingBottom="5dp">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/layout">
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                />
 
-                <TextView
-                    android:id="@+id/textViewTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:textStyle="bold"
-                    style="@style/TextAppearance.AppCompat.Medium"
-                    tools:text="TEXT"
-                    android:textSize="20sp"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="?attr/editTextColor" />
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="0dp"
+                style="@style/TextAppearance.AppCompat.Medium"
+                tools:text="TEXT" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageViewSitu"
-                    android:layout_marginRight="5dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="8dp" />
-
-            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/layout"
+            android:layout_alignLeft="@+id/layout"
+            android:layout_alignStart="@+id/layout"
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/textViewDesc"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="des"
-                android:textSize="14sp"
-                android:maxLength="50"
-                android:layout_marginLeft="8dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="5dp"
+                tools:text="des" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Small Text"
                 android:id="@+id/textViewDate"
-                android:textSize="14sp"
                 android:layout_below="@+id/textViewDesc"
-                android:layout_alignParentEnd="true"
-                android:gravity="right"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp" />
+                android:layout_alignRight="@+id/imageViewSitu"
+                android:layout_gravity="right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
 
-        </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewSitu"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/textViewDesc"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

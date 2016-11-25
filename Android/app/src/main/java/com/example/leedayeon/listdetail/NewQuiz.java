@@ -21,11 +21,22 @@ public class NewQuiz {
     private String right_answer;
     private String num; //몇명이 답을 찍었을까요
 
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
+    private String profile; //프로필 url
+
     public NewQuiz() {
 
     }
 
-    public NewQuiz(String title, String description, long end_time, int is_obj, String obj_1, String obj_2, String owner, String right_answer) {
+    public NewQuiz(String profile, String title, String description, long end_time, int is_obj, String obj_1, String obj_2, String owner, String right_answer) {
+        this.profile = profile;
         this.title = title;
         this.obj_2 = obj_2;
         this.obj_1 = obj_1;
@@ -36,7 +47,8 @@ public class NewQuiz {
         this.right_answer = right_answer;
     }
 
-    public NewQuiz(String title, String description, long end_time, int is_obj, String subj, String owner, String right_answer) {
+    public NewQuiz(String profile, String title, String description, long end_time, int is_obj, String subj, String owner, String right_answer) {
+        this.profile = profile;
         this.title = title;
         this.subj = subj;
         this.is_obj = is_obj;
