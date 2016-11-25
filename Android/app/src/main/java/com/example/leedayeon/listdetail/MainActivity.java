@@ -68,32 +68,6 @@ public  class MainActivity extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        recycleAdapter = new FirebaseRecyclerAdapter<NewQuiz, PostViewHolder>(
-//                NewQuiz.class,
-//                R.layout.item_message,
-//                PostViewHolder.class,
-//                ref.child("games")) {
-//            @Override
-//            protected void populateViewHolder(PostViewHolder viewHolder, NewQuiz post, int position) {
-//                String owner =post.getOwner();
-//                long long_end_time = post.getEnd_time();
-//                is_end = is_end_time(long_end_time);
-//
-//                if(is_end_time(long_end_time) == true) {
-//                    viewHolder.dateView.setText("마감됨");
-//                    Log.e("is_end_time !!! ",post.getTitle() + "  " + Boolean.toString(is_end_time(post.getEnd_time())));
-//                    viewHolder.mView.setBackgroundColor(getResources().getColor(R.color.room_timeover));
-//                } else {
-//                    viewHolder.dateView.setText(formatTimeString(post.getEnd_time()));
-//                }
-//            }
-//        };
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +81,7 @@ public  class MainActivity extends AppCompatActivity {
 
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(layoutManager);
         ref = FirebaseDatabase.getInstance().getReference();
 
 
@@ -114,7 +89,8 @@ public  class MainActivity extends AppCompatActivity {
                 NewQuiz.class,
                 R.layout.item_message,
                 PostViewHolder.class,
-                ref.child("games")) {
+                ref.child("games")
+        ) {
 
             public String games_id;
 
@@ -122,17 +98,15 @@ public  class MainActivity extends AppCompatActivity {
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, NewQuiz post, final int position) {
 
-                date = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
-
                 String owner =post.getOwner();
                 long long_end_time = post.getEnd_time();
                 is_end = is_end_time(long_end_time);
 
-                /** 내가 참여한 방일때 이미지를 참여중으로 바꿈 -> 동작안함**/
+                /** 내가 참여한 방일때 이미지를 참여중으로 바꿈 -> 동작안함
                 if(is_joining(user.getUid(), recycleAdapter.getRef(position).getKey()) == true) {
                     viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.mipmap.join));
                 }
-
+                 **/
 
                 viewHolder.descView.setText(post.getDescription());
                 viewHolder.titleView.setText(post.getTitle());
@@ -141,15 +115,23 @@ public  class MainActivity extends AppCompatActivity {
                 if(is_end_time(long_end_time) == true) {
                     viewHolder.dateView.setText("마감됨");
                     viewHolder.mView.setBackgroundColor(getResources().getColor(R.color.room_timeover));
+                    if(user.getUid().equals(owner)) {
+                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.owner1));
+                    } else {
+                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, android.R.color.transparent));
+                    }
                 } else {
                     viewHolder.dateView.setText(formatTimeString(post.getEnd_time()));
                     viewHolder.mView.setBackgroundColor(Color.WHITE);
+                    if(user.getUid().equals(owner)) {
+                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.owner1));
+                    } else {
+                        viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, android.R.color.transparent));
+                    }
                 }
 
 
                 if(user.getUid().equals(owner)) { //방을 만든 주인일때
-                    viewHolder.imageSitu.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.owner1));
-
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -243,8 +225,6 @@ public  class MainActivity extends AppCompatActivity {
                 }
             }
         };
-
-        recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recycleAdapter);
 
         FloatingActionButton fab ;
