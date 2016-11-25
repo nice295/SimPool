@@ -44,6 +44,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
 
     Button btnStart;
 
+
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRef = database.getReference();
 
@@ -52,7 +53,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_quiz2);
 
-        setTitle("내기 추가하기!!!");
+        setTitle("내기 추가하기");
 
 //        paper로 전의 액티비티에서 전달한 값 읽어오기
         title = Paper.book().read("title");
@@ -75,17 +76,16 @@ public class NewQuizActivity2 extends AppCompatActivity {
                 if(is_obj == 1 && owner != null) {
                     obj_1 = ObjectFragment.obj1.getText().toString();
                     obj_2 = ObjectFragment.obj2.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2, owner, right_answer, num);
+                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2, owner, right_answer);
                 } else if(is_obj == 0 && owner != null){
                     subj = SubjectFragment.subj.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, subj, owner, right_answer, num);
+                    nq = new NewQuiz(title, description, end_time, is_obj, subj, owner, right_answer);
                 } else {
                     Toast.makeText(NewQuizActivity2.this, "입력값을 제대로 입력하세요", Toast.LENGTH_SHORT).show();
                 }
 
 //                myRef.child("games").setValue(nq);
                 myRef.child("games").push().setValue(nq);
-
 
                 Intent intent = new Intent(NewQuizActivity2.this, MainActivity.class);
                 startActivity(intent);

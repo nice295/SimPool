@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,6 +32,7 @@ public class DetailResult extends AppCompatActivity {
     TextView obj_1;
     TextView obj_2;
     private ImageView mIvWin;
+    private boolean answer_nothing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,7 @@ public class DetailResult extends AppCompatActivity {
                 if(map.get("right_answer") == null) {
                     rightResult.setText(" ");
                     checkResult.setText("방장이 시간내에 정답을 입력하지 않았습니다.");
+                    answer_nothing = true;
                 } else if(map.get("right_answer").toString().equals(dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue())) {
                     rightResult.setText("정답은 " + map.get("right_answer") + "입니다.");
                     checkResult.setText("정답을 맞추셨습니다!");
@@ -81,32 +84,40 @@ public class DetailResult extends AppCompatActivity {
             }
         });
 
-        myRef.child("games").child(games_id).child("num").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Map<String, String> map = (Map) dataSnapshot.getValue();
-                if (map.get("obj_1") == null) {
-                    obj_1.setWidth(1);
+            myRef.child("games").child(games_id).child("num").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Map<String, String> map = (Map) dataSnapshot.getValue();
+                    if(map == null) {
+                        Toast.makeText(DetailResult.this, "아무도 참여하지 않았습니다", Toast.LENGTH_SHORT).show();
+                        obj_1.setVisibility(View.INVISIBLE);
+                        obj_2.setVisibility(View.INVISIBLE);
+                    } else {
+                        if( answer_nothing == true) {
+                            obj_1.setVisibility(View.INVISIBLE);
+                            obj_2.setVisibility(View.INVISIBLE);
+                        } else {
+                            if (map.get("obj_1") == null) {
+                                obj_1.setWidth(1);
+                            } else {
+                                int i = Integer.parseInt(map.get("obj_1").toString());
+                                obj_1.setWidth(i * 100);
+                            }
 
-                } else {
-                    int i = Integer.parseInt(map.get("obj_1").toString());
-                    obj_1.setWidth(i * 100);
+                            if(map.get("obj_2") == null) {
+                                obj_2.setWidth(1);
+                            } else {
+                                int j = Integer.parseInt(map.get("obj_2").toString());
+                                obj_2.setWidth(j*100);
+                            }
+                        }
+                    }
                 }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-                if(map.get("obj_2") == null) {
-                    obj_2.setWidth(1);
-                } else {
-                    int j = Integer.parseInt(map.get("obj_2").toString());
-                    obj_2.setWidth(j*100);
                 }
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+            });
+        }
 
     }
-}

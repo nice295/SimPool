@@ -25,7 +25,7 @@ public class NewQuiz {
 
     }
 
-    public NewQuiz(String title, String description, long end_time, int is_obj, String obj_1, String obj_2, String owner, String right_answer, String num) {
+    public NewQuiz(String title, String description, long end_time, int is_obj, String obj_1, String obj_2, String owner, String right_answer) {
         this.title = title;
         this.obj_2 = obj_2;
         this.obj_1 = obj_1;
@@ -34,10 +34,9 @@ public class NewQuiz {
         this.description = description;
         this.owner = owner;
         this.right_answer = right_answer;
-        this.num = num;
     }
 
-    public NewQuiz(String title, String description, long end_time, int is_obj, String subj, String owner, String right_answer, String num) {
+    public NewQuiz(String title, String description, long end_time, int is_obj, String subj, String owner, String right_answer) {
         this.title = title;
         this.subj = subj;
         this.is_obj = is_obj;
@@ -45,15 +44,6 @@ public class NewQuiz {
         this.description = description;
         this.owner = owner;
         this.right_answer = right_answer;
-        this.num = num;
-    }
-
-    public String getNum() {
-        return num;
-    }
-
-    public void setNum(String num) {
-        this.num = num;
     }
 
     public String getOwner() {
