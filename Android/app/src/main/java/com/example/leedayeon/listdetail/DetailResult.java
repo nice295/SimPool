@@ -39,7 +39,7 @@ public class DetailResult extends AppCompatActivity {
 
         checkResult = (TextView) findViewById(R.id.checkResult);
         rightResult = (TextView) findViewById(R.id.rightResult);
-        mIvWin = (ImageView) findViewById(R.id.ivWin);
+//        mIvWin = (ImageView) findViewById(R.id.ivWin);
         obj_1 = (TextView)findViewById(R.id.obj_1);
         obj_2 = (TextView)findViewById(R.id.obj_2);
 

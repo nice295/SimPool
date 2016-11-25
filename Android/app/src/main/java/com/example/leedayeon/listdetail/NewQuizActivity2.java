@@ -36,6 +36,7 @@ public class NewQuizActivity2 extends AppCompatActivity {
     private String subj; //주관식 답지
     private String right_answer;
     private String owner;
+    private String num;
 
     RadioGroup radioGroup;
     RadioButton radioObj;
@@ -74,10 +75,10 @@ public class NewQuizActivity2 extends AppCompatActivity {
                 if(is_obj == 1 && owner != null) {
                     obj_1 = ObjectFragment.obj1.getText().toString();
                     obj_2 = ObjectFragment.obj2.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2, owner, right_answer);
+                    nq = new NewQuiz(title, description, end_time, is_obj, obj_1, obj_2, owner, right_answer, num);
                 } else if(is_obj == 0 && owner != null){
                     subj = SubjectFragment.subj.getText().toString();
-                    nq = new NewQuiz(title, description, end_time, is_obj, subj, owner, right_answer);
+                    nq = new NewQuiz(title, description, end_time, is_obj, subj, owner, right_answer, num);
                 } else {
                     Toast.makeText(NewQuizActivity2.this, "입력값을 제대로 입력하세요", Toast.LENGTH_SHORT).show();
                 }
