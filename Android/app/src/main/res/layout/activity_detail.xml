@@ -23,7 +23,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/tvDescription"
             android:elevation="1dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,13 +54,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Item1"
                 android:layout_weight="1"
-                android:layout_marginTop="0dp" />
+                android:layout_marginTop="0dp"
+                android:textSize="24sp" />
 
             <RadioButton
                 android:text="Item2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/Item2" />
+                android:id="@+id/Item2"
+                tools:textSize="24sp" />
 
         </RadioGroup>
 

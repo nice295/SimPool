@@ -17,7 +17,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:id="@+id/msg" />
+        android:id="@+id/msg"
+        tools:textSize="24sp" />
 
     <TextView
         android:text="TextView"
@@ -26,7 +27,8 @@
         android:layout_marginTop="74dp"
         android:id="@+id/obj_2"
         android:layout_below="@+id/obj_1"
-        android:layout_alignStart="@+id/obj_1" />
+        android:layout_alignStart="@+id/obj_1"
+        tools:textSize="18sp" />
 
     <TextView
         android:text="TextView"
@@ -35,7 +37,8 @@
         android:layout_marginTop="106dp"
         android:id="@+id/obj_1"
         android:layout_below="@+id/msg"
-        android:layout_alignStart="@+id/textView18" />
+        android:layout_alignStart="@+id/textView18"
+        tools:textSize="18sp" />
 
     <TextView
         android:text="TextView"
@@ -44,6 +47,7 @@
         android:id="@+id/rightAnswer"
         android:layout_below="@+id/msg"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp" />
+        android:layout_marginTop="17dp"
+        tools:textSize="18sp" />
 
 </RelativeLayout>
