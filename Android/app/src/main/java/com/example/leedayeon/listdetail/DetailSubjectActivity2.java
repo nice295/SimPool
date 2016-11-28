@@ -19,8 +19,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Map;
 
+import static com.example.leedayeon.listdetail.MainActivity.formatTimeString;
 import static com.example.leedayeon.listdetail.R.color.room_timeover;
 
 public class DetailSubjectActivity2 extends AppCompatActivity  {
@@ -38,9 +40,12 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
     private String desc;
     private String quiz;
 
+
     private int temp;
 
-    NewQuiz post;
+    private long end_time;
+
+
 
     //final Date date = new Date(post.getEnd_time());
 
@@ -78,6 +83,9 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
 
                 desc = map.get("description");
                 tvDescription.setText(desc);
+
+                end_time = Long.parseLong(String.valueOf(map.get("end_time")));
+                tvMsg.setText(formatTimeString(end_time));
 
                 //dt = map.get("end_time");
                 quiz = map.get("subj");

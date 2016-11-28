@@ -51,7 +51,8 @@
             android:layout_alignStart="@+id/tvDescription"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="16dp"
+            android:textSize="18sp" />
 
         <TextView
             android:text="TextView"

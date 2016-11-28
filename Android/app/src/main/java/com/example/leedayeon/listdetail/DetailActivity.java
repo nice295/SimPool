@@ -22,11 +22,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.example.leedayeon.listdetail.MainActivity.formatTimeString;
 
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mBtJoin;
@@ -37,6 +41,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
     private TextView tvTitle;
     private TextView tvDescription;
+    private TextView tvMsg;
 
     private String title;
     private String desc;
@@ -50,6 +55,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     FirebaseUser user;
     private String games_id;
     private ArrayList<String> list;
+    private long end_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
         tvTitle = (TextView)findViewById(R.id.tvTitle);
         tvDescription = (TextView)findViewById(R.id.tvDescription);
+        tvMsg = (TextView)findViewById(R.id.tvMsg);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -109,6 +116,9 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
                 // date = map.get("end_time");
                 // tvMsg.setText(date);
+
+                end_time = Long.parseLong(String.valueOf(map.get("end_time")));
+                tvMsg.setText(formatTimeString(end_time));
 
 //                answer=map.get("right_answer");
 

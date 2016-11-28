@@ -67,7 +67,8 @@
             android:layout_below="@+id/tvDescription"
             android:layout_alignStart="@+id/tvDescription"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp" />
+            android:layout_marginStart="16dp"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,8 +79,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_below="@+id/tvMsg"
             android:layout_alignStart="@+id/tvMsg"
-            android:layout_marginTop="35dp"
-            tools:textSize="24sp" />
+            android:layout_marginTop="35dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
             android:layout_marginTop="16dp"
             android:layout_below="@+id/Item1"
             android:layout_alignStart="@+id/Item1"
-            android:textSize="24sp" />
+            android:textSize="22sp" />
 
     </LinearLayout>
 

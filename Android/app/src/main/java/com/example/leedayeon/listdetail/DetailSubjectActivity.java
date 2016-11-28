@@ -22,10 +22,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.example.leedayeon.listdetail.MainActivity.formatTimeString;
 
 public class DetailSubjectActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,12 +38,14 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
     private TextView tvTitle;
     private TextView tvDescription;
     private TextView tvQuiz;
+    private TextView tvMsg;
 
     private EditText answer;
 
     private String title;
     private String desc;
     private String quiz;
+    private long end_time;
 
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth mAuth;
@@ -55,6 +61,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
         tvTitle = (TextView)findViewById(R.id.tvTitle);
         tvDescription = (TextView)findViewById(R.id.tvDescription);
         tvQuiz = (TextView)findViewById(R.id.tvQuiz);
+        tvMsg = (TextView)findViewById(R.id.tvMsg);
         answer = (EditText)findViewById(R.id.answer);
 
         mAuth = FirebaseAuth.getInstance();
@@ -79,6 +86,9 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
 
                 // date = map.get("end_time");
                 // tvMsg.setText(date);
+
+                end_time = Long.parseLong(String.valueOf(map.get("end_time")));
+                tvMsg.setText(formatTimeString(end_time));
 
                 Map<String, String> sbj_map = (Map)dataSnapshot.child("num").getValue();
                 try {

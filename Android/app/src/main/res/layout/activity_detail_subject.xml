@@ -40,6 +40,16 @@
 
         <TextView
             android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMsg"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="22sp" />
+
+        <TextView
+            android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvDescription"
@@ -47,7 +57,7 @@
             android:layout_marginTop="35dp"
             android:id="@+id/tvQuiz"
             android:layout_marginStart="16dp"
-            tools:textSize="24sp" />
+            android:textSize="22sp" />
 
         <EditText
             android:layout_width="match_parent"

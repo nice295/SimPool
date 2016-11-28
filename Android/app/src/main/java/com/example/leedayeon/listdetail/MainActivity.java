@@ -305,7 +305,7 @@ public  class MainActivity extends AppCompatActivity {
         return is_join;
     }
 
-    private static class TIME_MAXIMUM{
+    public static class TIME_MAXIMUM{
         public static final int SEC = 60;
         public static final int MIN = 60;
         public static final int HOUR = 24;

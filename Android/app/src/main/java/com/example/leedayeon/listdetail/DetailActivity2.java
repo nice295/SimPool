@@ -26,10 +26,12 @@ import com.google.firebase.database.ValueEventListener;
 import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.leedayeon.listdetail.MainActivity.formatTimeString;
 import static com.example.leedayeon.listdetail.R.color.room_timeover;
 
 public class DetailActivity2 extends AppCompatActivity {
@@ -48,15 +50,13 @@ public class DetailActivity2 extends AppCompatActivity {
 
     private String title;
     private String desc;
+    private long end_time;
     private String obj_1;
     private String obj_2;
 
     private int temp;
 
     NewQuiz post;
-
-    //final Date date = new Date(post.getEnd_time());
-
 
 
     @Override
@@ -78,9 +78,8 @@ public class DetailActivity2 extends AppCompatActivity {
 
       //  SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
        // tvMsg.setText(dt.format(date));
-        SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
+  //      SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
         //tvMsg.setText(dt.format(date));
-
 
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
@@ -93,6 +92,9 @@ public class DetailActivity2 extends AppCompatActivity {
 
                desc = map.get("description");
                tvDescription.setText(desc);
+
+                end_time = Long.parseLong(String.valueOf(map.get("end_time")));
+                tvMsg.setText(formatTimeString(end_time));
 
                //dt = map.get("end_time");
 
