@@ -45,10 +45,6 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
     private static final int RC_SIGN_IN = 1;
     private GoogleApiClient mGoogleApiClient;
 
-    private EditText editTextEmail;
-    private EditText editTextPassword;
-    private Button buttonSignin;
-    private TextView textSignup;
     private ProgressDialog progressDialog;
     private SignInButton mGoogleBtn;
     private  LoginButton loginButton;
@@ -74,17 +70,11 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
         mPasswordInputLayout = (TextInputLayout) findViewById(R.id.input_password);
 
         progressDialog = new ProgressDialog(this);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        buttonSignin = (Button) findViewById(R.id.buttonSignIn);
-        textSignup = (TextView) findViewById(R.id.textSignUp);
 
         mGoogleBtn = (SignInButton) findViewById(R.id.button_google_login);
         loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
         mCallbackManager = CallbackManager.Factory.create();
 
-        buttonSignin.setOnClickListener(this);
-        textSignup.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -215,50 +205,10 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void userLogin(){
-
-        String email = editTextEmail.getText().toString();
-        String password = editTextPassword.getText().toString();
-
-        if(!(showError(email, password))){
-
-            return;
-        }
-
-        progressDialog.setMessage("Logging in...");
-        progressDialog.show();
-
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-
-                        if(task.isSuccessful()){
-                            //start the profile activity
-                            finish();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-
-                        }
-                        else{
-//                            Toast.makeText(LoginActivity.this, "회원 정보가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
-                            mEmailInputLayout.setError("회원 정보가 일치하지 않습니다.");
-                        }
-                    }
-                });
-    }
     @Override
     public void onClick(View view) {
-        if (view == buttonSignin) {
-            userLogin();
-        }
-        if (view == textSignup) {
-            finish();
-            startActivity(new Intent(this, RegisterActivity.class));
-        }
+
         if (view == loginButton){
-
-
         }
 
     }
