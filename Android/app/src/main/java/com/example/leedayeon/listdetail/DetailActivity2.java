@@ -4,18 +4,21 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,6 +46,7 @@ public class DetailActivity2 extends AppCompatActivity {
     private TextView Item1;
     private TextView Item2;
     private Button btEnter;
+    private ImageView ivProfile;
 
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
 
@@ -70,7 +74,7 @@ public class DetailActivity2 extends AppCompatActivity {
         Item1 = (TextView)findViewById(R.id.Item1);
         Item2 = (TextView)findViewById(R.id.Item2);
         btEnter = (Button)findViewById(R.id.btEnter);
-
+        ivProfile = (ImageView)findViewById(R.id.ivProfile);
 
         Intent intent2 = getIntent();
         games_id = intent2.getStringExtra("games_id");
@@ -81,14 +85,19 @@ public class DetailActivity2 extends AppCompatActivity {
   //      SimpleDateFormat dt = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분");
         //tvMsg.setText(dt.format(date));
 
+   //     Glide.with(DetailActivity2.this).load(post.getProfile()).into(ivProfile);
 
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Map<String, String> map = (Map)dataSnapshot.getValue();
+
                 title = map.get("title");
                 Log.e("hhahahah", title);
                 tvTitle.setText(title);
+
+                //ivProfile.setImageDrawable(dataSnapshot.getValue());
+                Glide.with(DetailActivity2.this).load(map.get("profile")).into(ivProfile);
 
                desc = map.get("description");
                tvDescription.setText(desc);
@@ -131,6 +140,7 @@ public class DetailActivity2 extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 myRef.child("games").child(games_id).child("right_answer").setValue(str[temp]);
                                 Toast.makeText(getApplicationContext(), "정답이 입력되었습니다.", Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         })
                         .setNegativeButton("취소", null)
@@ -140,6 +150,7 @@ public class DetailActivity2 extends AppCompatActivity {
                             }
                         })
                         .show();
+
                         //btEnter.setEnabled(false);
 
         }});

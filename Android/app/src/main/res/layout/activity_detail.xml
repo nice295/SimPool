@@ -9,22 +9,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="445dp"
+        android:layout_height="match_parent"
         android:layout_weight="0.65">
 
         <!-- TODO: Update blank fragment layout -->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:id="@+id/tvTitle"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/tvDescription"
-            android:elevation="1dp"
-            android:layout_marginTop="10dp"
-            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,17 +24,28 @@
             android:layout_marginStart="16dp"
             android:layout_below="@+id/tvTitle"
             android:layout_toEndOf="@+id/imageView"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="32dp"
             android:layout_marginRight="0dp"
             android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescription"
+            android:layout_marginTop="16dp"
+            android:id="@+id/tvMsg"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="18sp" />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvDescription"
             android:id="@+id/radioButtons"
-            android:layout_alignStart="@+id/tvDescription"
-            android:layout_marginTop="55dp">
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/tvMsg"
+            android:layout_alignStart="@+id/tvMsg">
 
             <RadioButton
                 android:text="Item1"
@@ -66,16 +65,26 @@
 
         </RadioGroup>
 
+        <view
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            class="de.hdodenhof.circleimageview.CircleImageView"
+            android:id="@+id/ivProfile"
+            android:layout_alignTop="@+id/tvTitle"
+            android:layout_alignStart="@+id/tvDescription" />
+
         <TextView
-            android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvDescription"
-            android:layout_marginTop="16dp"
-            android:id="@+id/tvMsg"
-            android:layout_marginStart="16dp"
-            tools:textSize="24sp"
-            android:layout_marginBottom="16dp" />
+            android:text="Title"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:id="@+id/tvTitle"
+            android:elevation="1dp"
+            android:layout_marginTop="33dp"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ivProfile"
+            android:layout_marginStart="13dp" />
 
     </RelativeLayout>
 

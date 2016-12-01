@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,31 +22,18 @@
         android:textColor="#FFFFFF"
         android:background="#2196F3" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:id="@+id/relativeLayout"
-        android:layout_weight="0.65"
-        android:layout_above="@+id/btEnter"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
         <!-- TODO: Update blank fragment layout -->
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:id="@+id/tvTitle"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/tvDescription"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="16dp"
-            tools:textSize="30sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
             android:id="@+id/tvDescription"
@@ -56,7 +44,8 @@
             android:layout_toEndOf="@+id/imageView"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="32dp"
+            android:layout_weight="0.00" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,11 +53,11 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="It&apos;s over!"
             android:id="@+id/tvMsg"
+            android:layout_marginTop="18dp"
+            android:textSize="18sp"
             android:layout_below="@+id/tvDescription"
             android:layout_alignStart="@+id/tvDescription"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:textSize="18sp" />
+            android:textColor="?android:attr/textColorSecondary" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,10 +65,9 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Item1"
             android:id="@+id/Item1"
-            android:layout_gravity="center_horizontal"
-            android:layout_below="@+id/tvMsg"
-            android:layout_alignStart="@+id/tvMsg"
-            android:layout_marginTop="35dp" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -94,7 +82,27 @@
             android:layout_alignStart="@+id/Item1"
             android:textSize="22sp" />
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:id="@+id/tvTitle"
+            tools:textSize="30sp"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@+id/ivProfile"
+            android:layout_toEndOf="@+id/tvMsg" />
+
+        <view
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            class="de.hdodenhof.circleimageview.CircleImageView"
+            android:layout_marginTop="16dp"
+            android:id="@+id/ivProfile"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tvDescription" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

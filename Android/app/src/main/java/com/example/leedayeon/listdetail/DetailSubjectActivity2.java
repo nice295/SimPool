@@ -9,9 +9,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +33,7 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
     private TextView tvMsg;
     private TextView tvQuiz;
     private Button btEnter;
+    private ImageView ivProfile;
 
     private DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
 
@@ -52,7 +55,7 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_subject2);
 
@@ -61,6 +64,7 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
         tvMsg = (TextView)findViewById(R.id.tvMsg);
         tvQuiz = (TextView)findViewById(R.id.tvQuiz);
         btEnter = (Button)findViewById(R.id.btEnter);
+        ivProfile = (ImageView)findViewById(R.id.ivProfile);
 
 
         Intent intent2 = getIntent();
@@ -80,6 +84,8 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
                 title = map.get("title");
                 Log.e("hhahahah", title);
                 tvTitle.setText(title);
+
+                Glide.with(DetailSubjectActivity2.this).load(map.get("profile")).into(ivProfile);
 
                 desc = map.get("description");
                 tvDescription.setText(desc);
@@ -120,6 +126,7 @@ public class DetailSubjectActivity2 extends AppCompatActivity  {
                                 String value = answer.getText().toString();
                                 myRef.child("games").child(games_id).child("right_answer").setValue(value);
                                 Toast.makeText(getApplicationContext(), "정답이 입력되었습니다.", Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         })
                         .setNegativeButton("취소", null)

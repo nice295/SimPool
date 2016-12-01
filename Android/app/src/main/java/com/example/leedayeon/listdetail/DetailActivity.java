@@ -7,11 +7,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.leedayeon.listdetail.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,6 +44,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     private TextView tvTitle;
     private TextView tvDescription;
     private TextView tvMsg;
+    private ImageView ivProfile;
 
     private String title;
     private String desc;
@@ -70,6 +73,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         tvTitle = (TextView)findViewById(R.id.tvTitle);
         tvDescription = (TextView)findViewById(R.id.tvDescription);
         tvMsg = (TextView)findViewById(R.id.tvMsg);
+        ivProfile = (ImageView)findViewById(R.id.ivProfile);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -110,6 +114,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 Map<String, String> map = (Map)dataSnapshot.getValue();
                 title = map.get("title");
                 tvTitle.setText(title);
+                Glide.with(DetailActivity.this).load(map.get("profile")).into(ivProfile);
 
                 desc = map.get("description");
                 tvDescription.setText(desc);

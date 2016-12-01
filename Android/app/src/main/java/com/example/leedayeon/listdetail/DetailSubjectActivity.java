@@ -8,11 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.leedayeon.listdetail.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,6 +41,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
     private TextView tvDescription;
     private TextView tvQuiz;
     private TextView tvMsg;
+    private ImageView ivProfile;
 
     private EditText answer;
 
@@ -63,6 +66,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
         tvQuiz = (TextView)findViewById(R.id.tvQuiz);
         tvMsg = (TextView)findViewById(R.id.tvMsg);
         answer = (EditText)findViewById(R.id.answer);
+        ivProfile = (ImageView)findViewById(R.id.ivProfile);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -78,11 +82,13 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
                 title = map.get("title");
                 tvTitle.setText(title);
 
+                Glide.with(DetailSubjectActivity.this).load(map.get("profile")).into(ivProfile);
+
                 desc = map.get("description");
                 tvDescription.setText(desc);
 
                 quiz = map.get("subj");
-                tvQuiz.setText(quiz);
+                tvQuiz.setText("힌트 : "+quiz);
 
                 // date = map.get("end_time");
                 // tvMsg.setText(date);
@@ -116,7 +122,7 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
                     if(user.getUid().equals(friendSnapshot.getKey())){
                         mBtJoin.setText(getString(R.string.joining));
                         mBtJoin.setEnabled(false);
-
+                        answer.setEnabled(false);
                     }
 
                 }

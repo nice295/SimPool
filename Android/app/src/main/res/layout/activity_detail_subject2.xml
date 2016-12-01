@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_detail_subject2"
     android:layout_width="match_parent"
@@ -7,25 +8,12 @@
     tools:context="com.example.leedayeon.listdetail.DetailSubjectActivity2"
     >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="347dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:id="@+id/relativeLayout">
 
         <!-- TODO: Update blank fragment layout -->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:id="@+id/tvTitle"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/tvDescription"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="16dp"
-            tools:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,24 +23,8 @@
             android:layout_gravity="left|center_vertical"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:layout_below="@+id/tvTitle"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/imageView"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="It&apos;s over!"
-            android:id="@+id/tvMsg"
-            android:layout_below="@+id/tvDescription"
-            android:layout_alignStart="@+id/tvDescription"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:textSize="18sp" />
+            android:layout_marginStart="16dp" />
 
         <TextView
             android:text="TextView"
@@ -66,7 +38,38 @@
             android:layout_marginTop="38dp"
             tools:textSize="24sp" />
 
-    </LinearLayout>
+        <view
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            class="de.hdodenhof.circleimageview.CircleImageView"
+            android:id="@+id/ivProfile"
+            android:layout_alignTop="@+id/tvTitle"
+            android:layout_alignStart="@+id/tvQuiz" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="It&apos;s over!"
+            android:id="@+id/tvMsg"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/tvDescription"
+            android:layout_alignStart="@+id/tvDescription"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="23dp"
+            tools:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tvMsg" />
+
+    </RelativeLayout>
 
     <Button
         android:layout_width="match_parent"
