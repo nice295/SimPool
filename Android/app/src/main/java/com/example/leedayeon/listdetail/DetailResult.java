@@ -31,6 +31,8 @@ public class DetailResult extends AppCompatActivity {
     TextView rightResult;
     TextView obj_1;
     TextView obj_2;
+    TextView one;
+    TextView two;
     private ImageView mIvWin;
     private boolean answer_nothing;
 
@@ -44,6 +46,8 @@ public class DetailResult extends AppCompatActivity {
 //        mIvWin = (ImageView) findViewById(R.id.ivWin);
         obj_1 = (TextView)findViewById(R.id.obj_1);
         obj_2 = (TextView)findViewById(R.id.obj_2);
+        one = (TextView)findViewById(R.id.one);
+        two = (TextView)findViewById(R.id.two);
 
         Intent intent2 = getIntent();
         games_id = intent2.getStringExtra("games_id");
@@ -88,6 +92,7 @@ public class DetailResult extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Map<String, String> map = (Map) dataSnapshot.getValue();
+
                     if(map == null) {
                         Toast.makeText(DetailResult.this, "아무도 참여하지 않았습니다", Toast.LENGTH_SHORT).show();
                         obj_1.setVisibility(View.INVISIBLE);
@@ -98,17 +103,21 @@ public class DetailResult extends AppCompatActivity {
                             obj_2.setVisibility(View.INVISIBLE);
                         } else {
                             if (map.get("obj_1") == null) {
-                                obj_1.setWidth(1);
+                                obj_1.setWidth(10);
+                                one.setText("1번 : 0명");
                             } else {
+                                one.setText("1번 : "+map.get("obj_1")+"명");
                                 int i = Integer.parseInt(map.get("obj_1").toString());
-                                obj_1.setWidth(i * 100);
+                                obj_1.setWidth(i * 200);
                             }
 
                             if(map.get("obj_2") == null) {
-                                obj_2.setWidth(1);
+                                two.setText("2번 : 0명");
+                                obj_2.setWidth(10);
                             } else {
+                                two.setText("2번 : "+map.get("obj_2")+"명");
                                 int j = Integer.parseInt(map.get("obj_2").toString());
-                                obj_2.setWidth(j*100);
+                                obj_2.setWidth(j*200);
                             }
                         }
                     }
