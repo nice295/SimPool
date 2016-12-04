@@ -2,11 +2,14 @@ package com.example.leedayeon.listdetail;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +41,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.Signature;
 
 public class SignActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -88,7 +95,6 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(intent);
                     finish();
 
-                    Toast.makeText(SignActivity.this, "user 저장", Toast.LENGTH_SHORT).show();
                     try{
                         writeNewUser(user.getUid(), user.getDisplayName(), user.getEmail(), user.getPhotoUrl().toString());
                     }catch (NullPointerException e){
@@ -140,6 +146,7 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
         mGoogleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "sign click");
                 signIn();
             }
         });
@@ -177,7 +184,7 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
-
+                        startActivity(new Intent(SignActivity.this, MainActivity.class));
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
@@ -186,6 +193,7 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(SignActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
+
                         // ...
                     }
                 });

@@ -261,8 +261,6 @@ public  class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         //ActionBar 메뉴 클릭에 대한 이벤트 처리
 
-        Toast.makeText(this, "로그아웃", Toast.LENGTH_SHORT).show();
-        mAuth.getInstance().signOut();
         int id = item.getItemId();
         switch (id){
             case R.id.logout_button:
