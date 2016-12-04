@@ -95,13 +95,13 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
 
                 end_time = Long.parseLong(String.valueOf(map.get("end_time")));
                 tvMsg.setText(formatTimeString(end_time));
-
-                Map<String, String> sbj_map = (Map)dataSnapshot.child("num").getValue();
-                try {
-                    answer_num = sbj_map.get("subj");
-                }catch (NullPointerException e){
-                    answer_num = String.valueOf(0);
-                }
+//
+//                Map<String, String> sbj_map = (Map)dataSnapshot.child("num").getValue();
+//                try {
+//                    answer_num = sbj_map.get("subj");
+//                }catch (NullPointerException e){
+//                    answer_num = String.valueOf(0);
+//                }
 
             }
 
@@ -145,14 +145,17 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View view) {
         if (view == mBtJoin) {
-
                 myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(answer.getText().toString());
+            if(answer_num==null){
+                myRef.child("games").child(games_id).child("num").child("answer").setValue("0");
+            }
                 myRef.child("games").child(games_id).child("num").child("answer").setValue(String.valueOf(Integer.parseInt(answer_num) + 1));
                 mBtJoin.setText(getString(R.string.joining));
                 mBtJoin.setEnabled(false);
             Toast.makeText(this, "참여 성공하였습니다.", Toast.LENGTH_SHORT).show();
 
             mBtJoin.setEnabled(false);
+
 
 //            Map<String, Object> childUpdates = new HashMap<>();
 //            childUpdates.put("/games/" + games_id, result);
@@ -162,5 +165,6 @@ public class DetailSubjectActivity extends AppCompatActivity implements View.OnC
 
 
         }
+        finish();
     }
 }

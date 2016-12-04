@@ -145,6 +145,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                     obj2_num = String.valueOf(0);
                 }
 
+
             }
 
             @Override
@@ -195,11 +196,18 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
             }
             else {
                 myRef.child("games").child(games_id).child("participant").child(user.getUid()).child("answer").setValue(rd.getText().toString());
-                if (rd.getText().equals(obj_1))
+                if (rd.getText().equals(obj_1)) {
+                    if(obj1_num == null){
+                        myRef.child("games").child(games_id).child("num").child("obj_1").setValue("0");
+                    }
                     myRef.child("games").child(games_id).child("num").child("obj_1").setValue(String.valueOf(Integer.parseInt(obj1_num) + 1));
-                else
-                    myRef.child("games").child(games_id).child("num").child("obj_2").setValue(String.valueOf(Integer.parseInt(obj2_num) + 1));
-
+                }
+                    else{
+                    if(obj2_num == null){
+                        myRef.child("games").child(games_id).child("num").child("obj_2").setValue("0");
+                    }
+                        myRef.child("games").child(games_id).child("num").child("obj_2").setValue(String.valueOf(Integer.parseInt(obj2_num) + 1));
+                }
 
                 mBtJoin.setText(getString(R.string.joining));
                 mBtJoin.setEnabled(false);
@@ -218,5 +226,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
 
         }
+        finish();
     }
+
 }

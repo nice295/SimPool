@@ -74,6 +74,7 @@ public class DetailResult extends AppCompatActivity {
                     rightResult.setText(" ");
                     checkResult.setText("방장이 시간내에 정답을 입력하지 않았습니다.");
                     answer_nothing = true;
+
                 } else if(map.get("right_answer").toString().equals(dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue())) {
                     rightResult.setText("정답은 " + map.get("right_answer") + "입니다.");
                     checkResult.setText("정답을 맞추셨습니다!");
@@ -115,7 +116,7 @@ public class DetailResult extends AppCompatActivity {
                             } else {
                                 one.setText( str_obj_1 + " : " + map.get("obj_1")+"명");
                                 int i = Integer.parseInt(map.get("obj_1").toString());
-                                obj_1.setWidth(i * 200);
+                                obj_1.setWidth(i * 100);
                             }
                             if(map.get("obj_2") == null) {
                                 two.setText("2번 : 0명");
@@ -123,7 +124,7 @@ public class DetailResult extends AppCompatActivity {
                             } else {
                                 two.setText(str_obj_2 + " : " + map.get("obj_2")+"명");
                                 int j = Integer.parseInt(map.get("obj_2").toString());
-                                obj_2.setWidth(j * 200);
+                                obj_2.setWidth(j * 100);
                             }
                         }
                     }
@@ -136,3 +137,4 @@ public class DetailResult extends AppCompatActivity {
         }
 
     }
+//EB:1B:0A:D3:4B:39:BA:0A:C4:26:4D:A0:2D:37:C3:E4:05:59:FC:95

@@ -12,38 +12,6 @@
     tools:context="com.example.leedayeon.listdetail.DetailResult">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:id="@+id/obj_2"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:background="@color/colorPrimary"
-        android:layout_below="@+id/obj_1"
-        android:layout_alignStart="@+id/obj_1"
-        android:layout_marginTop="44dp"
-        android:gravity="center_vertical" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="77dp"
-        android:id="@+id/obj_1"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:background="@android:color/holo_red_light"
-        android:gravity="center_vertical"
-        android:layout_below="@+id/checkResult"
-        android:layout_alignStart="@+id/checkResult" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/obj_2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="13dp"
-        android:id="@+id/one"
-        android:layout_alignTop="@+id/obj_1" />
-
-    <TextView
         android:text="Answer is"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,11 +34,41 @@
         android:layout_alignStart="@+id/rightResult" />
 
     <TextView
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="75dp"
+        android:id="@+id/obj_1"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:background="@android:color/holo_red_light"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/checkResult"
+        android:layout_alignStart="@+id/one" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/two"
-        android:layout_alignTop="@+id/obj_2"
-        android:layout_toEndOf="@+id/obj_2" />
+        android:layout_below="@+id/obj_1"
+        android:layout_alignStart="@+id/obj_1"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/obj_2"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/two"
+        android:layout_alignStart="@+id/two" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:id="@+id/one"
+        android:layout_marginBottom="40dp"
+        android:layout_alignBottom="@+id/obj_1"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
