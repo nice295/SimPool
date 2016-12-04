@@ -36,6 +36,9 @@ public class DetailResult extends AppCompatActivity {
     private ImageView mIvWin;
     private boolean answer_nothing;
 
+    String str_obj_1;
+    String str_obj_2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,7 @@ public class DetailResult extends AppCompatActivity {
         user = mAuth.getCurrentUser();
 
 
+
         myRef.child("games").child(games_id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -63,6 +67,8 @@ public class DetailResult extends AppCompatActivity {
 //                Log.e("right answer : ", "" + map.get("right_answer").toString());
 //                Log.e("user answer : ", "" + dataSnapshot.child("participant").child(user.getUid()).child("answer").getValue());
 
+                str_obj_1 = map.get("obj_1");
+                str_obj_2 = map.get("obj_2");
 
                 if(map.get("right_answer") == null) {
                     rightResult.setText(" ");
@@ -103,21 +109,21 @@ public class DetailResult extends AppCompatActivity {
                             obj_2.setVisibility(View.INVISIBLE);
                         } else {
                             if (map.get("obj_1") == null) {
+                                Log.e("DETAIL RESULT : NULL" , "");
                                 obj_1.setWidth(10);
                                 one.setText("1번 : 0명");
                             } else {
-                                one.setText("1번 : "+map.get("obj_1")+"명");
+                                one.setText( str_obj_1 + " : " + map.get("obj_1")+"명");
                                 int i = Integer.parseInt(map.get("obj_1").toString());
                                 obj_1.setWidth(i * 200);
                             }
-
                             if(map.get("obj_2") == null) {
                                 two.setText("2번 : 0명");
                                 obj_2.setWidth(10);
                             } else {
-                                two.setText("2번 : "+map.get("obj_2")+"명");
+                                two.setText(str_obj_2 + " : " + map.get("obj_2")+"명");
                                 int j = Integer.parseInt(map.get("obj_2").toString());
-                                obj_2.setWidth(j*200);
+                                obj_2.setWidth(j * 200);
                             }
                         }
                     }
