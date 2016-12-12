@@ -8,7 +8,7 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.example.leedayeon.listdetail.MainActivity"
+        tools:context="com.simpool.leedayeon.listdetail.MainActivity"
         tools:showIn="@layout/activity_main">
 
     <android.support.v7.widget.RecyclerView

@@ -46,6 +46,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "608123350788-5qtv6tlmltt3tf6rff15gqjvblv36qcl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.leedayeon.listdetail",
+            "certificate_hash": "EB1B0AD34B39BA0AC4264DA02D37C3E40559FC95"
+          }
+        },
+        {
+          "client_id": "608123350788-vnibv2lthse0di5caa8harfrjl6vb17j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.leedayeon.listdetail",
+            "certificate_hash": "E36FD2E217410A450A8B4C15D3E95012D6F1DA08"
+          }
+        },
+        {
+          "client_id": "608123350788-qbtcf2svlptrm5oh8bl1b0qhdk04a2bq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.leedayeon.listdetail",
+            "certificate_hash": "9796864BB0AA626DDF68B38F8F5E3577B1A7A959"
+          }
+        },
+        {
           "client_id": "608123350788-9bciplp3fh3n48pnhpfdsam3av83vqrl.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -62,6 +86,81 @@
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608123350788:android:5e7db8aa3cca0381",
+        "android_client_info": {
+          "package_name": "data.test.mobile.ddwu.temp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608123350788-9bciplp3fh3n48pnhpfdsam3av83vqrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC8q3j9jhdlAdLbtOP6KnZiJW7qAK0gNU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608123350788:android:87f29c028598831f",
+        "android_client_info": {
+          "package_name": "com.simpool.leedayeon.listdetail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608123350788-4f532mb9o13irenmt8og57agm55f1qcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simpool.leedayeon.listdetail",
+            "certificate_hash": "CB697776674FB5607EFE5BA44124DC0A4D1D1D75"
+          }
+        },
+        {
+          "client_id": "608123350788-9bciplp3fh3n48pnhpfdsam3av83vqrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC8q3j9jhdlAdLbtOP6KnZiJW7qAK0gNU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608123350788-9bciplp3fh3n48pnhpfdsam3av83vqrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
